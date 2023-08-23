@@ -1,19 +1,38 @@
-import React,{useState} from "react";
-import "./Form.css";
-
+import React, { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Form = () => {
+const countries = [
+  { code: "+1" },
+  { code: "+44" },
+  { code: "+91" },
+  // can have more country codes
+];
+
+const ExpertForm = ({ close }) => {
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [phone, setPhone] = useState("");
+  const [countryCode, setCountryCode] = useState("+91");
+  // const [city, setCity] = useState("");
+  const [whatsappUpdates, setWhatsappUpdates] = useState(false);
+  const [formClosed, setFormClosed] = useState(false);
 
   const [formData, setFormData] = useState({
     name: "",
-    phone: "",
     email: "",
-    message: "",
+    phone: "",
+    city: "",
   });
 
-  
+  const handleCloseModal = () => {
+    setFormClosed(true);
+  };
+
+  if (formClosed) {
+    return null; // Return null to not render the form
+  }
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -47,9 +66,9 @@ const Form = () => {
         // Clear  form
         setFormData({
           name: "",
-          phone: "",
           email: "",
-          message: "",
+          phone: "",
+          city: "",
         });
       })
       .catch((error) => {
@@ -59,190 +78,265 @@ const Form = () => {
       });
   };
 
-
-
   return (
-    <div className="container-fluid" style={{ backgroundColor: "black" }}>
-      <div
-        className=""
-        style={{
-          width: "88%",
-          marginLeft: "auto",
-          marginRight: "auto",
-          color: "white",
-        //   height: "100vh",
-          paddingTop: "2rem",
-          paddingBottom: "5rem",
-        }}
-      >
-        <div className="row">
+    <div className="expertForm">
+      {formClosed ? null : (
+        <div
+          style={{
+            color: "white",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            backgroundColor: "#1a2333",
+            padding: "0.5rem",
+          }}
+        >
+          {close == "false" && (
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss=""
+              aria-label="Close"
+              onClick={handleCloseModal}
+              style={{
+                backgroundColor: "white",
+
+                marginLeft: "auto",
+                marginTop: "0rem",
+              }}
+            ></button>
+          )}
+
           <div
-            className="col-12 col-md-6 formbg"
             style={{
               display: "flex",
-              flexDirection: "column",
+              flexDirection: "row",
               justifyContent: "center",
               alignItems: "center",
-            //   backgroundColor:"black",
-            //   opacity:"0.5",color:"white"
             }}
           >
-            <div>
-              <h3 style={{fontSize:"120%"}}>Send us a Message</h3>
-              <h5 style={{  marginTop: "3rem" ,fontSize:"90%",fontWeight:"500"}}>
-                If you are interested in our product and want a demo or have any
-                queries, please fill in the form, we will get in touch with you
-                soon.
-              </h5>
-              <p
-                style={{ margin: "0", fontSize: "95%", fontWeight: "bold" }}
-              >
-                Contact Us:
-              </p>
-            
-            </div>
+            <img
+              src="https://res.cloudinary.com/dyylqn8vb/image/upload/v1686306566/call-removebg-preview_z39xqd.png"
+              alt="call us"
+              style={{ height: "10%", width: "10%" }}
+            />
+            <h5
+              style={{
+                padding: "0.2rem",
+                paddingTop: "0.7rem",
+                fontSize: "15px",
+                fontWeight: "bold",
+              }}
+            >
+              Contact Our Real Estate Expert
+            </h5>
           </div>
-          <div
-            className="col-12 col-md-6"
-            style={{ paddingTop: "3rem", paddingBottom: "1rem" }}
+
+          <form
+            className="container mt-4"
+            onSubmit={handleSubmit}
+            style={{
+              padding: "2rem",
+              display: "flex",
+              flexDirection: "column",
+              backgroundColor: "#0e1420",
+              borderRadius: "4rem",
+            }}
           >
-            <form className="row g-3"   onSubmit={handleSubmit}>
-              <div className="col-6">
-                <label
-                  for="name"
-                  className="form-label"
+            <div className="mb-3">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                // onChange={(e) => setName(e.target.value)}
+                onChange={handleChange}
+                className=""
+                required
+                style={{
+                  backgroundColor: "#1a2333",
+                  color: "white",
+                  border: "",
+                  width: "100%",
+                  padding: "0.5rem",
+                  paddingLeft: "2rem",
+                  fontSize: "15px",
+                  fontWeight: "bold",
+                  borderRadius: "5rem",
+                }}
+                placeholder="Name"
+              />
+            </div>
+
+            <div className="mb-3">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                // onChange={(e) => setEmail(e.target.value)}
+                onChange={handleChange}
+                className=""
+                required
+                style={{
+                  backgroundColor: "#1a2333",
+                  color: "white",
+                  border: "",
+                  width: "100%",
+                  padding: "0.5rem",
+                  paddingLeft: "2rem",
+                  fontSize: "15px",
+                  fontWeight: "bold",
+                  borderRadius: "5rem",
+                }}
+                placeholder="email"
+              />
+            </div>
+
+            <div className="mb-3">
+              <div
+                className=""
+                style={{ display: "flex", flexDirection: "row" }}
+              >
+                <select
+                  id="countryCode"
+                  value={countryCode}
+                  onChange={(e) => setCountryCode(e.target.value)}
+                  required
                   style={{
-                    margin: "0",
-                     fontSize: "90%",
+                    backgroundColor: "#1a2333",
+                    width: "",
+                    color: "gray",
+                    padding: "0.5rem",
+                    paddingLeft: "2rem",
+                    fontSize: "15px",
                     fontWeight: "bold",
+                    borderRadius: "5rem",
                   }}
                 >
-                  First name
-                </label>
-                 <input required
-                  type="text"
-                  className="form-control"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  style={{
-                    backgroundColor: "#191919",
-                    color: "white",
-                    border: "0",
-                    borderRadius: "5px",
-                    margin: "0",
-                  }}
-                />
-              </div>
-              <div className="col-6">
-                <label
-                  for="phone"
-                  className="form-label"
-                  style={{
-                    margin: "0",
-                     fontSize: "90%",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Phone Number
-                </label>
-                 <input required
+                  <option value="" disabled></option>
+                  {countries.map((country) => (
+                    <option key={country.code} value={country.code}>
+                      {country.code}
+                    </option>
+                  ))}
+                </select>
+                <input
                   type="tel"
+                  id="phone"
                   name="phone"
                   value={formData.phone}
+                  // onChange={(e) => setPhone(e.target.value)}
                   onChange={handleChange}
-                  className="form-control"
-                  id="phone"
+                  className=""
+                  required
                   style={{
-                    backgroundColor: "#191919",
+                    backgroundColor: "#1a2333",
                     color: "white",
-                    border: "0",
-                    borderRadius: "5px",
+                    border: "",
+                    width: "100%",
+                    padding: "0.5rem",
+                    paddingLeft: "2rem",
+                    fontSize: "15px",
+                    fontWeight: "bold",
+                    borderRadius: "5rem",
                   }}
+                  placeholder="Mobile Number"
                 />
               </div>
-              <div className="col-12">
-                <label
-                  for="email"
-                  className="form-label"
-                  style={{
-                    margin: "0",
-                     fontSize: "90%",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Email
-                </label>
-                 <input required
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="form-control"
-                  id="email"
-                  placeholder=""
-                  style={{
-                    backgroundColor: "#191919",
-                    color: "white",
-                    border: "0",
-                    borderRadius: "5px",
-                  }}
-                />
-              </div>
-              <div className="col-12">
-                <label
-                  for="msg"
-                  className="form-label"
-                  style={{
-                    margin: "0",
-                     fontSize: "90%",
-                    fontWeight: "bold",
-                  }}
-                >
-                  Message
-                </label>
-                <textarea
-                  type="text"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows="4"
-                  cols="50"
-                  className="form-control"
-                  id="msg"
-                  placeholder=""
-                  style={{
-                    backgroundColor: "#191919",
-                    color: "white",
-                    border: "0",
-                    borderRadius: "5px",
-                  }}
-                ></textarea>
-              </div>
+            </div>
 
-              <div className="col-12">
-                <button
-                  type="submit"
-                  className="btn "
+            <div className="mb-3">
+              <input
+                type="text"
+                id="city"
+                name="city"
+                value={formData.city}
+                // onChange={(e) => setCity(e.target.value)}
+                onChange={handleChange}
+                className=""
+                required
+                style={{
+                  backgroundColor: "#1a2333",
+                  color: "white",
+                  border: "",
+                  width: "100%",
+                  padding: "0.5rem",
+                  paddingLeft: "2rem",
+                  fontSize: "15px",
+                  fontWeight: "bold",
+                  borderRadius: "5rem",
+                }}
+                placeholder="City"
+              />
+            </div>
+            <div style={{ display: "flex" }}>
+              <div
+                className="form-check mb-3"
+                style={{ marginLeft: "1rem", display: "inline-flex" }}
+              >
+                <input
+                  type="checkbox"
+                  id="whatsappUpdates"
+                  checked={whatsappUpdates}
+                  onChange={(e) => setWhatsappUpdates(e.target.checked)}
+                  className="form-check-input"
+                  style={{ fontSize: "150%", backgroundColor: "gray" }}
+                />
+                <label
+                  htmlFor="whatsappUpdates"
+                  className="form-check-label"
                   style={{
-                    backgroundColor: " #4600B9",
-                    borderRadius: "8px",
-                    color: "white",
-                     fontSize: "90%",
-                    padding: "0.6rem",
+                    color: "gray",
+                    paddingTop: "0.2rem",
+                    paddingLeft: "0.5rem",
+                    fontSize: "15px",
                     fontWeight: "bold",
+                    borderRadius: "5rem",
+                    display: "block",
                   }}
                 >
-                  Send Message
-                </button>
+                  Get updates through
+                </label>
+
+                <img
+                  style={{ height: "70%", width: "12%" }}
+                  src="https://res.cloudinary.com/dyylqn8vb/image/upload/v1686308205/wat2-removebg-preview_xvwma8.png"
+                />
+
+                <span
+                  style={{
+                    color: "green",
+                    fontWeight: "bold",
+                    fontSize: "1rem",
+                    paddingTop: "0.2rem",
+                  }}
+                >
+                  WhatsApp
+                </span>
               </div>
-            </form>
-          </div>
+            </div>
+
+            <button
+              type="submit"
+              className="btn"
+              style={{
+                margin: "auto",
+                borderRadius: "30px",
+                border: "3px solid #05e317",
+                color: "white",
+                fontWeight: "bold",
+                paddingLeft: "2rem",
+                paddingRight: "2rem",
+              }}
+            >
+              Contact Now
+            </button>
+          </form>
         </div>
-      </div>
+      )}
     </div>
   );
 };
-
-export default Form;
+export default ExpertForm;

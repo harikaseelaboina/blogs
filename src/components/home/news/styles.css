@@ -30,6 +30,9 @@
     .maincar{
         height: 25rem;
     }
+    .luxcar{
+        height: 15rem;
+    }
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
@@ -64,6 +67,9 @@
     }
     .maincar{
         height: 26rem;
+    }
+    .luxcar{
+        height: 20rem;
     }
 }
 
@@ -100,6 +106,9 @@
     .maincar{
         height: 30rem;
     }
+    .luxcar{
+        height: 20rem;
+    }
 }
 
 /* Media Query for Laptops and Desktops */
@@ -134,6 +143,9 @@
     }
 .maincar{
     height: 35rem;
+}
+.luxcar{
+    height: 25rem;
 }
     
 }
