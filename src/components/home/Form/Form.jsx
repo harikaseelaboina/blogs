@@ -9,7 +9,7 @@ const countries = [
   // can have more country codes
 ];
 
-const ExpertForm = ({ close }) => {
+const Form = ({ close }) => {
   // const [name, setName] = useState("");
   // const [email, setEmail] = useState("");
   // const [phone, setPhone] = useState("");
@@ -79,7 +79,7 @@ const ExpertForm = ({ close }) => {
   };
 
   return (
-    <div className="expertForm">
+    <div className="" style={{backgroundColor:"transparent"}}>
       {formClosed ? null : (
         <div
           style={{
@@ -339,4 +339,4 @@ const ExpertForm = ({ close }) => {
     </div>
   );
 };
-export default ExpertForm;
+export default Form;

@@ -177,7 +177,7 @@ const Luxurycarousel = (props) => {
              </span>
              <span style={{display:"flex",justifyContent:"center"}}>
                 <button   onClick={handleShowModal} style={{borderRadius:"30px",border:"2px solid green",width:"60%"}}>Request Call Back</button>
-                <Modal show={showModal} onHide={handleCloseModal}>
+                <Modal show={showModal} onHide={handleCloseModal} style={{backgroundColor:"transparent"}}>
               <Form close="true" />
             </Modal>
              </span>
