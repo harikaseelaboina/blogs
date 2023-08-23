@@ -47,6 +47,8 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import LuxuryProjects from "./news/Luxury";
+
 
 const heroImages = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
 const changeImage = (index) => {
@@ -371,9 +373,16 @@ const BlogPage = () => {
               <AadharCard />
             </section>
 
+            <section className="aadharcard">            
+            <LuxuryProjects />
+          </section>
+
             <section className="onestop" style={{ borderRadius: "12px" }}>
               <Services />
             </section>
+
+
+           
 
             <section
               className="blogSubscribe"
