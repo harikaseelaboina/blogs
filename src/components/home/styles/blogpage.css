@@ -404,7 +404,7 @@
   padding: 0.5rem 2rem;
   border-radius: 30px;
   width: 100%;
-  color: white;
+  /* color: white; */
   background: transparent;
   outline: none;
 }
