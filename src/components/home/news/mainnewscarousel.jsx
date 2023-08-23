@@ -82,7 +82,7 @@ const MainNewsCarousel = (props) => {
           effect={"fade"}
           loop={true}
           // loopedSlides="auto"
-          navigation={false}
+          navigation={true}
           pagination={false}
           keyboard={true}
           modules={[Navigation, Pagination, Keyboard, Autoplay, EffectFade]}
