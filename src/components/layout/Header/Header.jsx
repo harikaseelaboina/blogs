@@ -517,12 +517,12 @@ const Header = () => {
                       onChange={handleSearchInput}
                     />
                     <button
-                          type="submit"
-                          className="py-2 px-2 rounded-5 text-white fw-bold"
-                          onClick={searchData}
-                        >
-                          <BiChevronRight size={25} />
-                        </button>
+                      type="submit"
+                      className="py-2 px-2 rounded-5 text-white fw-bold"
+                      onClick={searchData}
+                    >
+                      <BiChevronRight size={25} />
+                    </button>
                   </div>
                 </div>
               </div>
@@ -575,7 +575,8 @@ const Header = () => {
                       title={
                         <span
                           style={{
-                            color: "#ebe8e1",
+                            // color: "#ebe8e1",
+                            color: "white",
                             fontSize: "0.8rem",
                             // margin: "5px",
                             // fontWeight:"bold"
@@ -607,7 +608,7 @@ const Header = () => {
                             <NavDropdown.Item
                               onClick={() => handleNavigate(val.link)}
                               key={index}
-                              className="custom-dropdown-item"
+                              className="custom-dropdown-item text-white "
                             >
                               {val.link}
                             </NavDropdown.Item>
