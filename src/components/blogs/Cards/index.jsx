@@ -38,7 +38,8 @@ function Cards(props) {
               key={index}
               className="rounded-3 pb-1 text-white"
               style={{
-                background: "#1A2333",
+                // background: "#1A2333",
+                background: "black",
                 cursor: "pointer",
               }}
             >

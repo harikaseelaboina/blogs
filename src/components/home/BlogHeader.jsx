@@ -27,35 +27,34 @@ let navLinks = [
       {
         link: "Tools",
         to: `/coming-soon`,
-      
-        url:"https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/95ab9d3dd7ac388e4caa8e6a836ac5_unscreen_3592b51fef.gif"
+
+        url: "https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/95ab9d3dd7ac388e4caa8e6a836ac5_unscreen_3592b51fef.gif",
       },
       {
         link: "Solutions",
         to: `/coming-soon`,
-        url:"https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/Cy_Xk9_ar_8d970e0fe4.gif",
+        url: "https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/Cy_Xk9_ar_8d970e0fe4.gif",
       },
       {
         link: "Blogs & News",
         to: `/coming-soon`,
-        url:"https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/0452b29aa0045bfb4d80417e86978b_unscreen_c3defd8e8f.gif"
+        url: "https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/0452b29aa0045bfb4d80417e86978b_unscreen_c3defd8e8f.gif",
       },
       {
         link: "Pincode",
         to: `/coming-soon`,
-        url:"https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/wired_gradient_18_location_pin_1_d537432334.gif"
+        url: "https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/wired_gradient_18_location_pin_1_d537432334.gif",
       },
       {
         link: "Guides",
         to: `/coming-soon`,
-        url:"https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/XQ_Tg_O5gt_2b257120c4.gif"
+        url: "https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/XQ_Tg_O5gt_2b257120c4.gif",
       },
       {
         link: "Real Estate Q&A Forum",
         to: `/coming-soon`,
-        url:"https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/q_and_a_forum_edd774cfc8.gif"
+        url: "https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/q_and_a_forum_edd774cfc8.gif",
       },
-      
     ],
   },
   // {
@@ -181,9 +180,9 @@ const BlogHeader = () => {
           <a className="logo navbar-brand" href="#">
             <img src={hnzLogo} alt="..." />
           </a>
-          <span className="datesz fw-bold text-black" >
+          {/* <span className="datesz fw-bold text-black" >
             {date}
-          </span>
+          </span> */}
           <button
             className="navbar-toggler"
             type="button"
@@ -203,6 +202,16 @@ const BlogHeader = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 mx-auto w-75 d-lg-flex flex-lg-row justify-content-lg-around">
+              <li className="nav-item position-relative">
+                <a
+                  className="nav-link text-white fw-bold"
+                  aria-current="page"
+                  href={`/`}
+                  style={navStyles.links}
+                >
+                  <span style={{ fontSize: "1rem", color: "black" }}>Home</span>
+                </a>
+              </li>
               {navLinks.map((val, i) => {
                 const { title, subLinks } = val;
                 return (
@@ -240,7 +249,7 @@ const BlogHeader = () => {
                             letterSpacing: "0",
                           }}
                           className="text-white mb-1 d-flex "
-                          href={mainWebsite+value.to}
+                          href={mainWebsite + value.to}
                           target="_blank"
                           key={i}
                         >
@@ -266,7 +275,10 @@ const BlogHeader = () => {
                   target="_blank"
                   style={navStyles.links}
                 >
-                  <span style={{ fontSize: "1rem", color: "black" }}> Glossary</span>
+                  <span style={{ fontSize: "1rem", color: "black" }}>
+                    {" "}
+                    Glossary
+                  </span>
                 </a>
               </li>
             </ul>
@@ -344,6 +356,16 @@ const BlogHeader = () => {
             }}
           />
           <ul className="navbar-nav">
+            <li className="nav-item position-relative">
+              <a
+                className="nav-link text-white fw-bold"
+                aria-current="page"
+                href={`/`}
+                style={navStyles.links}
+              >
+                <span style={{ fontSize: "1rem" }}>Home</span>
+              </a>
+            </li>
             {navLinks.map((val, i) => {
               const { title, subLinks } = val;
               return (
@@ -355,7 +377,7 @@ const BlogHeader = () => {
                     style={navStyles.links}
                     onClick={() => handleShow(i)}
                   >
-                    {title}
+                    <span style={{ fontSize: "1rem" }}>{title}</span>
                   </a>
                   <div
                     className={`SubLinks_Box position-absolute p-3 rounded-1  ${
@@ -379,6 +401,17 @@ const BlogHeader = () => {
                 </li>
               );
             })}
+            <li className="nav-item position-relative">
+              <a
+                className="nav-link text-white fw-bold"
+                aria-current="page"
+                href={`${mainWebsite}/coming-soon`}
+                target="_blank"
+                style={navStyles.links}
+              >
+                <span style={{ fontSize: "1rem" }}>Glossary</span>
+              </a>
+            </li>
           </ul>
         </div>
       </div>

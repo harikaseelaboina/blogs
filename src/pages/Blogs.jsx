@@ -14,10 +14,10 @@ function Blogs() {
       <div>
         {displaydata.length > 0 ? (
           <div
-            className="p-3 text-white rounded-start-4 "
+            className="p-3 rounded-start-4 "
             style={{
-              background:
-                "linear-gradient(to right, #1A2333, #1A2333, #0e14203d)",
+              // background:
+              //   "linear-gradient(to right, #1A2333, #1A2333, #0e14203d)",
             }}
           >
             <h4 className="m-0 fs-5 fw-bold">{title}</h4>

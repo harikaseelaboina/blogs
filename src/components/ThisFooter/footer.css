@@ -14,7 +14,7 @@
 
 .blog_footer a:hover {
     transition: color 0.2s ease-in-out;
-    color: rgb(13, 110, 253) !important;
+    /* color: rgb(13, 110, 253) !important; */
     font-weight: 700;
 }
 

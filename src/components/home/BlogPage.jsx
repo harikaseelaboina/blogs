@@ -1,7 +1,7 @@
 import { React, useContext, useEffect, useState } from "react";
 import axios from "axios";
 import "./styles/blogpage.css";
-import subscribe from "../../assets/blogs/subscribe-mail.png";
+import subscribe from "../../assets/blogs/subscribe-mail.gif";
 import loader from "../../assets/blogs/Simple elastic loader 1.png";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
@@ -173,7 +173,8 @@ const BlogPage = () => {
                 borderTopRightRadius: "1.5rem",
               }}
             >
-              Your Ultimate guide to successful innovation projects with
+              {/* Your Ultimate guide to successful innovation projects with */}
+              Discover Your Home With
             </span>
             <span
               id="title-2"
@@ -189,7 +190,7 @@ const BlogPage = () => {
               <span className="text-white">Blogs</span>
             </span>
           </section>
-
+          <div className="py-2"></div>
           <section
             className="mx-lg-5 mx-md-2"
             style={{
@@ -261,9 +262,9 @@ const BlogPage = () => {
               </div>
             </section>
 
-            <section className="mainNews">            
-            <MainNews />
-          </section>
+            <section className="mainNews">
+              <MainNews />
+            </section>
 
             {/* <section>
               <Swiper

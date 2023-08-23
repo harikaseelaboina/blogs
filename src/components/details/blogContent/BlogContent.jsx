@@ -60,8 +60,8 @@ const BlogContent = ({ data, setDataHeight }) => {
   }, []);
 
   return (
-    <div className="blogContent" id="data-height">
-      <div className="title p-3 rounded-3 fs-2 fw-bold ">
+    <div className="blogContent text-black" id="data-height">
+      <div className="title text-black p-3 rounded-3 fs-3 fw-bold ">
         {/* <ReactMarkdown
           children={blog?.attributes?.main_title}
           remarkPlugins={[remarkGfm]}

@@ -1,7 +1,13 @@
 import React, { Fragment, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 // import { Pagination, Navigation, Keyboard, Autoplay } from "swiper";
-import SwiperCore, { Pagination, Navigation, Keyboard, Autoplay } from "swiper";
+import SwiperCore, {
+  Pagination,
+  Navigation,
+  Keyboard,
+  Autoplay,
+  EffectFade,
+} from "swiper";
 
 // import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
@@ -23,7 +29,7 @@ import "./styles.css";
 const MainNewsCarousel = (props) => {
   const data = props.data;
 
-  console.log(data);
+  // console.log(data);
 
   const progressCircleRef = useRef(null);
   const progressContentRef = useRef(null);
@@ -42,9 +48,9 @@ const MainNewsCarousel = (props) => {
     // background: "linear-gradient(rgba(0, 0, 0, 0.237),rgba(0,0,0,0.237))",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    borderBottomRightRadius:"2rem",
-    borderBottomLeftRadius:"2rem",
-    
+    borderBottomRightRadius: "2rem",
+    borderBottomLeftRadius: "2rem",
+
     // minHeight: "100%",
     // height: "52.3vh",
   };
@@ -63,22 +69,23 @@ const MainNewsCarousel = (props) => {
       className="maincar"
       style={{
         width: "100%",
-        margin:"auto",
-       
+        margin: "auto",
+        height: "35rem",
         // border:"2px red solid",
-        marginTop:"0"
+        marginTop: "0",
       }}
     >
       {data && data.length > 0 && (
         <Swiper
           // slidesPerView={1}
           spaceBetween={15}
+          effect={"fade"}
           loop={true}
           // loopedSlides="auto"
           navigation={true}
           pagination={false}
           keyboard={true}
-          modules={[Navigation, Pagination, Keyboard, Autoplay]}
+          modules={[Navigation, Pagination, Keyboard, Autoplay, EffectFade]}
           className="mySwiper my-3 bg-transparent"
           autoplay={{
             delay: 2500,
@@ -144,34 +151,60 @@ const MainNewsCarousel = (props) => {
                         ...cardStyle,
                         backgroundColor: "#242c4a",
                         backgroundSize: "100% 100%",
-                        
-                       
-                        marginTop:"0",
-                        borderBottomRightRadius:"2rem",
-                        borderBottomLeftRadius:"2rem",
+                        height: "40rem",
+                        marginTop: "0",
+                        borderBottomRightRadius: "2rem",
+                        borderBottomLeftRadius: "2rem",
                         backgroundImage: `url(${item?.attributes?.blog_info?.image?.data?.[0].attributes.url})`,
                       }}
                     >
                       
                     </div>
-                    <div className="position-absolute  p-5 bg-opacity-50 mainnewtxt" >
-                   
-                    <div className="tittxt1 text-white text-start" >
-                      Main News
-                    </div>
-
-                    <div className="h3 text-white text-start tittxt" >
-                      {item?.attributes?.main_title}
-                    </div>
-                   
                     <div
-                    //   style={{ fontSize: "15px" }}
-                      className="d-flex flex-row justify-content-between"
+                      className="position-absolute  p-5 bg-opacity-50 "
+                      style={{ top: "45%" }}
                     >
-                         <div className="tittxt2 text-white text-start col-11" style={{letterSpacing:"0.3px"}}>
-                      {item?.attributes?.blog_info.main_content.slice(0, 450)}.....
-                    </div>
-                      {/* <span className="text-white d-flex flex-row align-items-center fw-bold">
+                      {/* <div style={{  }} className="py-2"> */}
+                      {/* <span className="badge text-bg-light rounded-pill me-2 p-2 ">
+                        {item?.attributes?.Type_of_property}
+                      </span> */}
+                      {/* <span className="badge text-bg-light rounded-pill me-2 p-2">
+                        {item?.attributes?.city}
+                      </span> */}
+                      {/* </div> */}
+                      <div
+                        className="h6 text-white text-start"
+                        style={{ fontWeight: "800", marginBottom: "1rem" }}
+                      >
+                        Main News
+                      </div>
+
+                      <div
+                        className="h3 text-white text-start"
+                        style={{
+                          width: "70%",
+                          fontWeight: "bold",
+                          marginBottom: "2rem",
+                        }}
+                      >
+                        {item?.attributes?.main_title}
+                      </div>
+
+                      <div
+                        //   style={{ fontSize: "15px" }}
+                        className="d-flex flex-row justify-content-between"
+                      >
+                        <div
+                          className="h6 text-white col-9"
+                          style={{ letterSpacing: "0.3px", textAlign: "justify" }}
+                        >
+                          {item?.attributes?.blog_info.main_content.slice(
+                            0,
+                            500
+                          )}
+                          .....
+                        </div>
+                        {/* <span className="text-white d-flex flex-row align-items-center fw-bold">
                         <img
                           src={clock}
                           alt="..."
@@ -185,18 +218,21 @@ const MainNewsCarousel = (props) => {
                           })
                           .replace(/\//g, "-")}
                       </span> */}
-                      <span className="txt1 col-1 text-white d-flex flex-row align-items-end fw-bold" style={{marginLeft:"0"}}>
-                        <img
-                          src={book}
-                          alt="..."
-                          className="img1"
-                        />
-                        <span className="text-white px-1">
-                          {item?.attributes?.blog_info?.read_time}
+                        <span
+                          className="col-1 text-white d-flex flex-row align-items-center fw-bold"
+                          style={{ marginLeft: "0" }}
+                        >
+                          <img
+                            src={book}
+                            alt="..."
+                            style={{ width: "30px", height: "30px" }}
+                          />
+                          <span className="text-white px-1">
+                            {item?.attributes?.blog_info?.read_time}
+                          </span>
+                          minutes
                         </span>
-                        minutes
-                      </span>
-                    </div>
+                      </div>
                     </div>
                   </div>
                 </a>

@@ -4,7 +4,7 @@
 }
 
 .blogCarousel .blogCarousel_title {
-    background: linear-gradient(to right, #1A2333, #1A2333, #0e14203d);
+    /* background: linear-gradient(to right, #1A2333, #1A2333, #0e14203d); */
     border-radius: 15px;
 }
 
@@ -24,7 +24,8 @@
 .blogCarousel .blogCarouselCard {
     width: 100%;
     height: 100%;
-    background-color: #1A2333;
+    /* background-color: #1A2333; */
+    background: black;
     cursor: pointer;
 }
 
