@@ -11,6 +11,8 @@ import { useParams } from "react-router-dom";
 import RecentPosts from "../components/details/blogPosts/RecentPosts";
 import axios from "axios";
 import Loader from "../components/loader";
+import Luxurycarousel from "../components/details/blogPosts/luxuryprojects";
+import LuxuryProjects from "../components/details/blogPosts/luxury";
 
 const Blogs = () => {
   const [ads, setAds] = useState([]);
@@ -130,6 +132,9 @@ const Blogs = () => {
                 title="More From Category"
                 category={data[0]?.attributes?.category}
               />
+
+               <LuxuryProjects/>
+
               <ServicesTable />
               <div
                 style={{

@@ -24,7 +24,8 @@ const RecentPosts = ({ title }) => {
       style={{
         marginBottom: "5px",
         marginTop: "5px",
-        backgroundColor: "#1A2333",
+        backgroundColor: "black",
+        borderRadius:"20px"
       }}
     >
       <div className="blogPosts_title position-relative mb-3">
@@ -38,7 +39,7 @@ const RecentPosts = ({ title }) => {
             href={`/details/${item.id}`}
             className="post gap-2"
             style={{
-              backgroundColor: "#0e1420",
+              backgroundColor: "white",
               display: "flex",
               flexDirection: "row",
               justifyContent: "flex-start",
@@ -65,7 +66,7 @@ const RecentPosts = ({ title }) => {
               }}
             >
               <h3
-                className="text-white "
+                className="text-dark"
                 style={{
                   textAlign: "start",
                   fontSize: "13px",
@@ -80,11 +81,11 @@ const RecentPosts = ({ title }) => {
               </h3>
               <p
                 className="m-0  mt-1"
-                style={{ color: "gray", fontSize: "12px" }}
+                style={{ color: "black", fontSize: "12px" }}
               >
                 In News
               </p>
-              <p className="m-0 text-white" style={{ fontSize: "12px" }}>
+              <p className="m-0 text-dark" style={{ fontSize: "12px" }}>
                 {item.attributes?.blog_info?.published_date}
               </p>
             </div>

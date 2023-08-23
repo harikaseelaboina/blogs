@@ -126,6 +126,7 @@ const Luxurycarousel = (props) => {
           // onAutoplayTimeLeft={onAutoplayTimeLeft}
         >
           
+              
               <SwiperSlide>
                <div style={{height:"luxcar",display:"flex",flexDirection:"column",justifyContent:"center"}} >
                 
@@ -155,35 +156,7 @@ const Luxurycarousel = (props) => {
                </div>
                </div>
               </SwiperSlide>
-              <SwiperSlide>
-               <div style={{height:"luxcar",display:"flex",flexDirection:"column",justifyContent:"center"}} >
-                
-                <div style={{ position:"relative",backgroundImage: `url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxsiHSwtRWQGR2uzbr568fB2b-bIO0u_X_BdHyPlr6jeCDvGdebfZYm3-Uo-7q34zPcGQ&usqp=CAU)`,height:"15rem",backgroundPosition:"center",backgroundSize:"cover",borderTopLeftRadius:"10px",borderTopRightRadius:"10px"}}>
-                 <div style={{position:"absolute",top:"5%",backgroundColor:"rgb(255, 255, 255,0.2)",padding:"0.2rem",display:"flex",flexDirection:"column",justifyContent:"flex-end",alignItems:"end",marginLeft:"90%"}}>
-                    <img src={heart} alt="hj" style={{cursor:"pointer",width:"1.5rem",padding:"0.2rem"}}/>
-                    <img src={share} alt="hj"  style={{cursor:"pointer",width:"1.5rem",padding:"0.3rem"}}/>
-                 </div>
-                </div>
-               
-               
-               <div style={{display:"flex",flexDirection:"column",backgroundColor:"#C88F63",borderBottomLeftRadius:"10px",borderBottomRightRadius:"10px",padding:"0.5rem"}}>
-                <span style={{padding:"0.5rem",paddingBottom:"0",fontWeight:"bold"}}>M3M Golf Hills</span>
-                <span style={{padding:"0.5rem",paddingTop:"0"}}>Sector 29,Gurgaon</span>
-             
-                <span  style={{padding:"0.5rem",paddingTop:"1rem",fontWeight:"bold"}}>₹ 1.57 Cr to 2.63 Cr</span>
-             <span style={{display:"flex", flexDirection:"row",justifyContent:"space-between",paddingTop:"0"}}>
-                <p style={{paddingLeft:"0.5rem",fontSize:"12px",fontWeight:"500",margin:"0"}}>3, 4  BHK Flats</p>
-                <p style={{fontSize:"12px",fontWeight:"500"}}>1570-2635 SQ FT</p>
-             </span>
-             <span style={{display:"flex",justifyContent:"center"}}>
-                <button   onClick={handleShowModal} style={{borderRadius:"30px",border:"2px solid green",width:"60%"}}>Request Call Back</button>
-                <Modal show={showModal} onHide={handleCloseModal} style={{backgroundColor:"transparent"}}>
-              <Form close="true" />
-            </Modal>
-             </span>
-               </div>
-               </div>
-              </SwiperSlide>
+              
               <SwiperSlide>
                <div style={{height:"luxcar",display:"flex",flexDirection:"column",justifyContent:"center"}} >
                 
@@ -213,6 +186,7 @@ const Luxurycarousel = (props) => {
                </div>
                </div>
               </SwiperSlide>
+              
               <SwiperSlide>
                <div style={{height:"luxcar",display:"flex",flexDirection:"column",justifyContent:"center"}} >
                 
@@ -242,6 +216,7 @@ const Luxurycarousel = (props) => {
                </div>
                </div>
               </SwiperSlide>
+              
               <SwiperSlide>
                <div style={{height:"luxcar",display:"flex",flexDirection:"column",justifyContent:"center"}} >
                 
@@ -271,6 +246,7 @@ const Luxurycarousel = (props) => {
                </div>
                </div>
               </SwiperSlide>
+              
               <SwiperSlide>
                <div style={{height:"luxcar",display:"flex",flexDirection:"column",justifyContent:"center"}} >
                 
@@ -300,6 +276,7 @@ const Luxurycarousel = (props) => {
                </div>
                </div>
               </SwiperSlide>
+              
               <SwiperSlide>
                <div style={{height:"luxcar",display:"flex",flexDirection:"column",justifyContent:"center"}} >
                 
@@ -329,6 +306,7 @@ const Luxurycarousel = (props) => {
                </div>
                </div>
               </SwiperSlide>
+              
               <SwiperSlide>
                <div style={{height:"luxcar",display:"flex",flexDirection:"column",justifyContent:"center"}} >
                 
@@ -358,6 +336,7 @@ const Luxurycarousel = (props) => {
                </div>
                </div>
               </SwiperSlide>
+              
              
            
         </Swiper>

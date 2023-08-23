@@ -57,11 +57,12 @@ const BlogPosts = ({ title, category }) => {
       style={{
         marginBottom: "5px",
         marginTop: "5px",
-        backgroundColor: "#1A2333",
+        borderRadius: "24px",
+                  backgroundColor:" #BBA592",
       }}
     >
       <div className="blogPosts_title position-relative mb-3">
-        <h4 className="text-white m-0 fs-5 fw-bold">{title}</h4>
+        <h4 className="text-dark m-0 fs-5 fw-bold">{title}</h4>
       </div>
       <div style={{ maxHeight: "35rem", minHeight: "20rem", overflow: "auto" }}>
         {data.map((item, index) => (
@@ -69,7 +70,7 @@ const BlogPosts = ({ title, category }) => {
             href={`/details/${item.id}`}
             className="post gap-2"
             style={{
-              backgroundColor: "#0e1420",
+              backgroundColor: "white",
               display: "flex",
               flexDirection: "row",
               justifyContent: "flex-start",
@@ -96,7 +97,7 @@ const BlogPosts = ({ title, category }) => {
               }}
             >
               <h3
-                className="text-white "
+                className="text-dark "
                 style={{
                   textAlign: "start",
                   fontSize: "13px",
@@ -111,11 +112,11 @@ const BlogPosts = ({ title, category }) => {
               </h3>
               <p
                 className="m-0  mt-1"
-                style={{ color: "gray", fontSize: "12px" }}
+                style={{ color: "black", fontSize: "12px" }}
               >
                 In News
               </p>
-              <p className="m-0 text-white" style={{ fontSize: "12px" }}>
+              <p className="m-0 text-dark" style={{ fontSize: "12px" }}>
                 {item.attributes?.blog_info?.published_date}
               </p>
             </div>

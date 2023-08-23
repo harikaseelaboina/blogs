@@ -79,7 +79,7 @@ const Form = ({ close }) => {
   };
 
   return (
-    <div className="" style={{backgroundColor:"transparent"}}>
+    <div className="expertForm">
       {formClosed ? null : (
         <div
           style={{
@@ -88,11 +88,12 @@ const Form = ({ close }) => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "#1a2333",
+            borderRadius: "24px",
+                  backgroundColor:" #BBA592",
             padding: "0.5rem",
           }}
         >
-          {close == "false" && (
+          {close == "true" && (
             <button
               type="button"
               className="btn-close"
@@ -127,6 +128,7 @@ const Form = ({ close }) => {
                 paddingTop: "0.7rem",
                 fontSize: "15px",
                 fontWeight: "bold",
+                color:"black"
               }}
             >
               Contact Our Real Estate Expert
@@ -140,7 +142,7 @@ const Form = ({ close }) => {
               padding: "2rem",
               display: "flex",
               flexDirection: "column",
-              backgroundColor: "#0e1420",
+              backgroundColor: "black",
               borderRadius: "4rem",
             }}
           >
@@ -155,8 +157,8 @@ const Form = ({ close }) => {
                 className=""
                 required
                 style={{
-                  backgroundColor: "#1a2333",
-                  color: "white",
+                  backgroundColor: "white",
+                  color:"black",
                   border: "",
                   width: "100%",
                   padding: "0.5rem",
@@ -180,8 +182,8 @@ const Form = ({ close }) => {
                 className=""
                 required
                 style={{
-                  backgroundColor: "#1a2333",
-                  color: "white",
+                  backgroundColor: "white",
+                  color: "black",
                   border: "",
                   width: "100%",
                   padding: "0.5rem",
@@ -205,9 +207,10 @@ const Form = ({ close }) => {
                   onChange={(e) => setCountryCode(e.target.value)}
                   required
                   style={{
-                    backgroundColor: "#1a2333",
+                    backgroundColor: "white",
+                  color: "gray",
                     width: "",
-                    color: "gray",
+                    
                     padding: "0.5rem",
                     paddingLeft: "2rem",
                     fontSize: "15px",
@@ -232,8 +235,8 @@ const Form = ({ close }) => {
                   className=""
                   required
                   style={{
-                    backgroundColor: "#1a2333",
-                    color: "white",
+                    backgroundColor: "white",
+                  color: "black",
                     border: "",
                     width: "100%",
                     padding: "0.5rem",
@@ -258,8 +261,8 @@ const Form = ({ close }) => {
                 className=""
                 required
                 style={{
-                  backgroundColor: "#1a2333",
-                  color: "white",
+                  backgroundColor: "white",
+                  color: "black",
                   border: "",
                   width: "100%",
                   padding: "0.5rem",
