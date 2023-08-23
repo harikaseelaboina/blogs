@@ -8,7 +8,7 @@ import footerimg2 from "../../assets/mainFooter/footer-img-2.png";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { mainWebsite } from "../../config";
-import logo from "../../assets/mainFooter/foo logo.png"
+import logo from "../../assets/mainFooter/foo logo.png";
 
 const index = () => {
   const formRef = useRef();
@@ -443,16 +443,11 @@ const index = () => {
             </div>
             {/* Row #2 */}
             <div className="row row2 d-flex">
-            <div className=" col-2  d-flex justify-content-center ">
-                <div className="qr-link">
+              <div className=" col-2  d-lg-flex d-md-flex d-none  justify-content-center">
+                <div className="qr-link ">
                   <div>
-                    <img
-                      src={logo}
-                      alt="..."
-                      style={{width:"100%"}}
-                    />
+                    <img src={logo} alt="..." style={{ width: "100%" }} />
                   </div>
-                 
                 </div>
               </div>
               <div className="col-8   hnz_desc">
@@ -477,7 +472,7 @@ const index = () => {
                     <img
                       src="https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/qr_5d73a4df9c.svg"
                       alt="..."
-                      style={{width:"100%"}}
+                      style={{ width: "100%" }}
                     />
                   </div>
                   <div
