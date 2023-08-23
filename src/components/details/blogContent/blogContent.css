@@ -3,7 +3,7 @@
 }
 
 .blogContent .title {
-    background-color: #1A2333;
+    /* background-color: #1A2333; */
 }
 
 .blogContent .blogHero_img {
@@ -37,7 +37,8 @@
 
 /* Table Content */
 .blogContent .blogTable {
-    background-color: #1A2333;
+    /* background-color: #1A2333; */
+    background: #BBA592;
     border-radius: 20px 0 20px 0;
 }
 
@@ -46,13 +47,15 @@
 }
 
 .blogContent .blogTable .table_title {
-    background-color: #0E1420;
+    /* background-color: #0E1420; */
+    background-color: white;
     border-radius: 20px 0 0 0;
 
 }
 
 .blogTable .blogTable_container {
-    background-color: #0E1420;
+    /* background-color: #0E1420; */
+    background-color: white;
     padding: 0 1rem;
     border-radius: 20px 0 20px 0;
 }
@@ -97,7 +100,8 @@
     width: 100%;
     height: 50%;
     bottom: 0;
-    background-color: #1A2333;
+    /* background-color: #1A2333; */
+    background-color: #BBA592;
 }
 
 .blogContent .profile .publishDate::before {
@@ -107,7 +111,8 @@
     height: 50%;
     top: 0;
     right: 0;
-    background-color: #1A2333;
+    /* background-color: #1A2333; */
+    background-color: #BBA592;
     border-radius: 20px 0 0 0;
 }
 

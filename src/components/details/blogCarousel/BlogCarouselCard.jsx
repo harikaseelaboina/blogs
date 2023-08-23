@@ -8,7 +8,7 @@ const BlogCarouselCard = ({ data }) => {
 
   return (
     <div
-      className="blogCarouselCard"
+      className="blogCarouselCard rounded-4"
       onClick={() => {
         naviagate(`/details/${data.id}`);
       }}
@@ -20,7 +20,7 @@ const BlogCarouselCard = ({ data }) => {
         }}
       >
         <img
-          className="h-100 w-100 object-fit-fill "
+          className="h-100 w-100 object-fit-fill rounded-top-4"
           src={data?.attributes?.blog_info?.image?.data?.[0]?.attributes?.url}
           alt="Loading..."
         />

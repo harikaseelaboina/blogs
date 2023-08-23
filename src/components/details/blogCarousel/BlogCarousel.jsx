@@ -28,7 +28,7 @@ const BlogCarousel = ({ sub_category }) => {
       {data.length > 0 ? (
         <div className="blogCarousel">
           <div className="blogCarousel_title p-2">
-            <h4 className="m-0 fs-5 fw-bold text-uppercase ">
+            <h4 className="m-0 fs-5 fw-bold text-uppercase text-black ">
               Related Category
             </h4>
           </div>
