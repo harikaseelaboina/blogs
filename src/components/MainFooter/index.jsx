@@ -8,6 +8,7 @@ import footerimg2 from "../../assets/mainFooter/footer-img-2.png";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { mainWebsite } from "../../config";
+import logo from "../../assets/mainFooter/foo logo.png"
 
 const index = () => {
   const formRef = useRef();
@@ -442,7 +443,19 @@ const index = () => {
             </div>
             {/* Row #2 */}
             <div className="row row2 d-flex">
-              <div className="col-lg-5 col-md-8 col-sm-6 hnz_desc">
+            <div className=" col-2  d-flex justify-content-center ">
+                <div className="qr-link">
+                  <div>
+                    <img
+                      src={logo}
+                      alt="..."
+                      style={{width:"100%"}}
+                    />
+                  </div>
+                 
+                </div>
+              </div>
+              <div className="col-8   hnz_desc">
                 <h5>About Us</h5>
                 <p>
                   Homznoffiz.com- India’s most trusted Real Estate & Proptech
@@ -458,12 +471,13 @@ const index = () => {
                   solutions to every need related to home.
                 </p>
               </div>
-              <div className="col-lg-7 col-md-4 col-sm-6 qr-container d-flex justify-content-lg-center justify-content-md-end">
+              <div className="col-2  d-flex justify-content-center ">
                 <div className="qr-link">
-                  <div id="qr-code">
+                  <div>
                     <img
                       src="https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/qr_5d73a4df9c.svg"
                       alt="..."
+                      style={{width:"100%"}}
                     />
                   </div>
                   <div
