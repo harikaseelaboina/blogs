@@ -259,11 +259,11 @@ const BlogPage = () => {
               </div>
             </section>
 
-            {/* <section className="mainNews">            
+            <section className="mainNews">            
             <MainNews />
-          </section> */}
+          </section>
 
-            <section>
+            {/* <section>
               <Swiper
                 // spaceBetween={30}
                 effect={"fade"}
@@ -311,7 +311,7 @@ const BlogPage = () => {
                   />
                 </SwiperSlide>
               </Swiper>
-            </section>
+            </section> */}
 
             <section className="featuredNews">
               {/* <FeaturedNews FeaturedNewsData={FeaturedNewsData} /> */}
