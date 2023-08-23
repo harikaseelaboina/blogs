@@ -47,7 +47,7 @@ function HeaderBlogs() {
       description={description}
       keywords={keywords}
     >
-      <div>
+      <div className="">
         {filteredData.length > 0 ? (
           <div
             className="p-3 rounded-start-4 "

@@ -101,7 +101,13 @@ const Blogs = () => {
     >
       {/* <Navbar /> */}
       {data && data.length > 0 && homedata ? (
-        <div>
+        <div
+          className="mx-lg-5 mx-md-2"
+          style={{
+            margin: "0 2%",
+            // border:"2px red solid"
+          }}
+        >
           <section className="mainSection d-flex  mt-3 gap-4">
             <div className="left" style={{ maxWidth: "70%" }}>
               {data.length > 0 ? (
@@ -122,7 +128,7 @@ const Blogs = () => {
 
             <div
               className="right d-flex  flex-column"
-              style={{ minWidth: "30%" }}
+              style={{ minWidth: "25%" }}
             >
               <ExpertForm />
               <RecentPosts title="Recent Postes" />
