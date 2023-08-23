@@ -24,6 +24,7 @@ import PlayButton from "../../playButton";
 import { useNavigate } from "react-router-dom";
 
 import CryptoJS from "crypto-js";
+import "./styles.css";
 
 const MainNewsCarousel = (props) => {
   const data = props.data;
@@ -46,7 +47,6 @@ const MainNewsCarousel = (props) => {
     border: "none",
     // background: "linear-gradient(rgba(0, 0, 0, 0.237),rgba(0,0,0,0.237))",
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
     backgroundSize: "cover",
     borderBottomRightRadius: "2rem",
     borderBottomLeftRadius: "2rem",
@@ -66,7 +66,7 @@ const MainNewsCarousel = (props) => {
 
   return (
     <div
-      // className="news-carousel"
+      className="maincar"
       style={{
         width: "100%",
         margin: "auto",
@@ -135,18 +135,18 @@ const MainNewsCarousel = (props) => {
                 </div>
                 <a
                   href={`/details/${item.id}`}
-                  className="card w-100 d-flex flex-column justify-content-end "
+                  className="card w-100 d-flex flex-column justify-content-end maincar"
                   style={{
                     ...cardStyle,
                     backgroundColor: "#242c4a",
 
-                    height: "33rem",
+                   
                     // backgroundImage: `url(${item?.attributes?.blog_info?.image?.data?.[0].attributes.url})`,
                   }}
                 >
                   <div>
                     <div
-                      className="d-flex  flex-column justify-content-start"
+                      className="d-flex  flex-column justify-content-start maincar"
                       style={{
                         ...cardStyle,
                         backgroundColor: "#242c4a",
@@ -158,20 +158,7 @@ const MainNewsCarousel = (props) => {
                         backgroundImage: `url(${item?.attributes?.blog_info?.image?.data?.[0].attributes.url})`,
                       }}
                     >
-                      {/* <img
-                        src={
-                          item?.attributes?.blog_info?.image?.data?.[0]
-                            .attributes.url
-                        }
-                        alt="hel"
-                        style={{
-                          width: "30rem",
-                          height: "14rem",
-
-                          objectFit: "contain",
-                          // borderRadius: "10px",
-                        }}
-                      /> */}
+                      
                     </div>
                     <div
                       className="position-absolute  p-5 bg-opacity-50 "

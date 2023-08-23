@@ -1,15 +1,7 @@
 import React from "react";
 import clock from "../../../assets/blogs/Clock.png";
 import book from "../../../assets/blogs/book.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Keyboard } from "swiper";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 const Articles = (props) => {
   const data = props.data;
 

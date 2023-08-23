@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import hnzLogo from "../../assets/blogs/blog header/af87f3d9-8317-474b-8bd6-bbee87854ffa 1.png";
 import user from "../../assets/blogs/blog header/🦆 icon _user circle alt_.svg";
-import facebook from "../../assets/blogs/blog header/facebook hover.svg";
-import instagram from "../../assets/blogs/blog header/instagram hover.svg";
-import linkedIn from "../../assets/blogs/blog header/LINKDIN HOVER.svg";
-import twitter from "../../assets/blogs/blog header/twitter hover.svg";
+import facebook from "../../assets/blogs/blog header/facebook hover.png";
+import instagram from "../../assets/blogs/blog header/instagram hover.png";
+import linkedIn from "../../assets/blogs/blog header/LINKDIN HOVER.png";
+import twitter from "../../assets/blogs/blog header/twitter hover.png";
 import "./blogHeader.css";
 import {
   MdOutlineKeyboardArrowUp,
@@ -80,29 +80,29 @@ let navLinks = [
 const social = [
   {
     name: "Instagram",
-    icon: "https://img.icons8.com/?size=512&id=Xy10Jcu1L2Su&format=png",
+    icon: instagram,
     link: "https://www.instagram.com/homznoffiz/",
   },
   {
     name: "LinekdIn",
-    icon: "https://img.icons8.com/?size=512&id=xuvGCOXi8Wyg&format=png",
+    icon: linkedIn,
     link: "https://www.linkedin.com/company/homznoffiz/",
   },
   {
     name: "Facebook",
-    icon: "https://img.icons8.com/?size=512&id=uLWV5A9vXIPu&format=png",
+    icon: facebook,
     link: "https://www.facebook.com/homznoffiz/",
   },
   {
     name: "Twitter",
-    icon: "https://img.icons8.com/?size=512&id=5MQ0gPAYYx7a&format=png",
+    icon:twitter,
     link: "#",
   },
-  {
-    name: "Threads",
-    icon: "https://seeklogo.com/images/T/threads-by-instagram-logo-20008C5295-seeklogo.com.png?v=638243447960000000",
-    link: "#",
-  },
+  // {
+  //   name: "Threads",
+  //   icon: "https://seeklogo.com/images/T/threads-by-instagram-logo-20008C5295-seeklogo.com.png?v=638243447960000000",
+  //   link: "#",
+  // },
 ];
 
 const BlogHeader = () => {
@@ -298,9 +298,9 @@ const BlogHeader = () => {
                     alt="..."
                     style={{ width: "11px", height: "11px" }}
                   />
-                  <img src={instagram} alt="..." />
-                  <img src={linkedIn} alt="..." />
-                  <img src={twitter} alt="..." />
+                  <img src={instagram} alt="..."  style={{ width: "11px", height: "11px" }} />
+                  <img src={linkedIn} alt="..."  style={{ width: "11px", height: "11px" }}/>
+                  <img src={twitter} alt="..."  style={{ width: "11px", height: "11px" }}/>
                 </div>
               </div>
               {show && (
