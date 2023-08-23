@@ -26,13 +26,14 @@ const TitleBar = (props) => {
         </span>
         <span className="link">
           <button
-            className="text-white"
+            className="text-dark"
             onClick={handleNavigate}
             style={{
               backgroundColor: "transparent",
               border: "0",
               fontWeight: "bold",
-              fontSize: "12px",
+              fontSize: "15px",
+              
             }}
           >
             View all

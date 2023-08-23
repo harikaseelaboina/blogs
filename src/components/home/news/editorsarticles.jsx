@@ -1,15 +1,7 @@
 import React from "react";
 import clock from "../../../assets/blogs/Clock.png";
 import book from "../../../assets/blogs/book.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Keyboard } from "swiper";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 const Articles = (props) => {
   const data = props.data;
 
@@ -31,7 +23,7 @@ const Articles = (props) => {
       <div style={{ display: "flex", flexDirection: "row" }}>
        
         <div className="col-12 d-flex m-auto" >
-          <div className="col-4"style={{height:"27rem"}}>
+          <div className="col-12 col-md-4">
             
               {Array.isArray(data) &&
                 data.slice(0, 1).map((item, index) => (
@@ -71,7 +63,7 @@ const Articles = (props) => {
            
           </div>
 
-          <div className="col-4"style={{height:"27rem"}} >
+          <div className="d-none d-md-block col-md-4" >
           <div className="col-12" >
             
             {Array.isArray(data) &&
@@ -106,7 +98,7 @@ const Articles = (props) => {
         </div>
 
           </div>
-          <div className="col-4" style={{height:"27rem"}}>
+          <div className="d-none d-md-block col-md-4" >
           <div className="col-12">
             
             {Array.isArray(data) &&
