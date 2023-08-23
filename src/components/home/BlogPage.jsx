@@ -188,7 +188,7 @@ const BlogPage = () => {
               <span className="text-white">Blogs</span>
             </span>
           </section>
-
+          <div className="py-2"></div>
           <section
             className="mx-lg-5 mx-md-2"
             style={{

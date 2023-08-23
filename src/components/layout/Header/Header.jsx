@@ -489,7 +489,7 @@ const Header = () => {
 
   return (
     <>
-      <Navbar expand="lg" className="blog_nav">
+      <Navbar expand="lg" className="blog_nav py-0 ">
         <div className="cust_container w-100 d-flex justify-content-between ">
           <Navbar.Brand href="/" className="homeBtn ">
             <img
