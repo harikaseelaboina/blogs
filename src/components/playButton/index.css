@@ -1,0 +1,26 @@
+.play-btn {
+    width: 40px;
+    height: 40px;
+    background: #1356db;
+    display: inline-block;
+    border-radius: 50%;
+    box-sizing: border-box;
+    transition: all .3s ease-in-out;
+    border: none;
+    z-index: 1;
+}
+
+.play-btn:hover {
+    background: #4b7ad8;
+}
+
+.play-btn .play {
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #fff;
+    position: relative;
+    margin: 0 auto;
+}

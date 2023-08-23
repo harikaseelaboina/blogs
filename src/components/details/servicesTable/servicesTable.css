@@ -1,0 +1,38 @@
+.servicesTable .services_bg .bg_img {
+    width: 100%;
+    height: 170px;
+}
+
+.servicesTable .services_bg .bg_img img {
+    width: 100%;
+    height: 100%;
+}
+
+.servicesTable .title {
+    bottom: 0;
+    width: 100%;
+}
+
+.servicesTable .serviceCards {
+    background-color: #1A2333;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(75px, 1fr));
+    justify-content: space-between;
+    gap: 0.7rem;
+}
+
+/* service card */
+
+.servicesTable .serviceCards .serviceCard {
+    background-color: #0E1420;
+    height: 83px;
+    border-radius: 8px;
+    padding: 0.3rem;
+}
+
+.servicesTable .serviceCards .serviceCard img {
+    width: 45px;
+    height: 45px;
+    display: block;
+    margin: 0 auto;
+}

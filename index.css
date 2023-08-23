@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  /* font-family: "Times New Roman", Times, serif; */
+  /* font-family: 'Open Sans'; */
+  font-family: 'Poppins' !important;
+  /* letter-spacing: 1px; */
+}
+
+body {
+  background: #0E1420 !important;
+  /* display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh; */
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.swiper-button-prev {
+  left: 0 !important;
+}
+
+.swiper-button-next {
+  right: 0 !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  background-color: #fff;
+  padding: 1.1rem;
+  height: 20px !important;
+  width: 20px !important;
+  border-radius: 50%;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #000;
+  font-weight: 700;
+  font-size: 14px !important;
+}
+
+.btn-close {
+  /* display: none; */
+  width: 18px !important;
+  height: 18px !important;
+  margin: 10px !important;
+}
+
+
+
+
+ .slick-arrow{
+
+  
+ }
+
+ 
+
+
+ /* <button type="button" data-role="none" 
+ class="slick-arrow slick-next"
+  style="display: block;">Next</button> */
+
+/* <button type="button" data-role="none" class="slick-arrow 
+slick-prev" style="display: block;">Previous</button> */
+
+/* Previous Arrow (left arrow) */
+.slick-prev {
+  /* Add your custom styles here */
+  background-color:rgb(167, 161, 161,0.6) !important;
+  /* border: 2px solid #ffffff !important; */
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  line-height: 45px !important;
+  font-size: 24px !important;
+ 
+  left: 5px !important;
+  z-index: 1 !important;
+}
+
+/* Next Arrow (right arrow) */
+.slick-next {
+ 
+background-color:rgb(167, 161, 161,0.7) !important;
+  /* border: 2px solid #ffffff !important; */
+  border-radius: 50% !important;
+  width: 40px !important;
+  height: 40px !important;
+  line-height: 45px !important;
+  font-size: 24px !important;
+
+  right: 5px !important;
+  z-index: 1 !important;
+}
+
+
+
+.slick-prev::before,
+.slick-next::before {
+  display: inline-block;
+  /* Display the default arrow icon */
+}
+  
+@media only screen and (min-width: 992px) {
+  body {
+    /* transform: scale(.85);
+    transform-origin: 50% 0; */
+    /* -ms-transform: scale(.85);
+    -ms-transform-origin: 50% 0; */
+    
+  }
+} 
+

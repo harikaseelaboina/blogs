@@ -1,0 +1,229 @@
+.nav-link::after {
+    display: none !important;
+}
+
+.blog_nav .cust_container {
+    padding: 0.25rem;
+    /* background-color: #1A2333; */
+    background-color: black;
+    border-radius: 15px !important;
+    width: 100%;
+}
+
+/* rder { */
+    /* border: 1px solid gray;
+    height: 60%; */
+/* } */
+
+.Border:first-child {
+    display: none !important;
+}
+
+.blog_nav .homeBtn {
+    /* background-color: #0E1420; */
+    border-radius: 15px 0 0 15px;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+}
+
+.nav-link {
+    color: white;
+    padding: 0 !important;
+    padding-right: 0.5rem !important;
+    letter-spacing: 0;
+}
+
+.nav-link:hover {
+    color: #1252AE;
+}
+
+.show {
+    color: #1252AE !important;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.blog_nav .toggleMenu {
+    width: 3.3rem;
+    height: 2.5rem;
+    margin-right: 0.5rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.blog_nav .toggleMenu .toggle_menu {
+    box-shadow: 0 0 0 0 transparent;
+}
+
+.blog_nav .toggleMenu .toggle_menu {
+    background-color: transparent;
+    margin: 0 auto;
+    display: block;
+    width: 2rem;
+    height: 2.5rem;
+    background: no-repeat center/contain url("/src/assets//blogsPage/hamMenu.svg");
+    border: none;
+}
+
+.blog_nav .toggleMenu .toggle_menu span {
+    display: none;
+}
+
+.navbar-expand-xxl .navbar-nav .dropdown-menu {
+    top: 2.7rem;
+    background-color: #0E1420;
+    left: 0;
+}
+
+.nav-item:last-child .dropdown-menu {
+    min-width: fit-content;
+    left: -3.5rem;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #0E1420;
+
+}
+
+.btn-close {
+    background: no-repeat center/contain url("/src/assets//blogsPage/closeBtn.svg");
+    font-size: 2rem;
+}
+
+.dropdown-item {
+    letter-spacing: 0;
+    color: white;
+}
+
+.blog_nav .dropdown-item:hover {
+    color: #1252AE;
+}
+
+.offcanvas {
+    background-color: #1A2333;
+}
+
+@media (min-width:1399px) {
+
+    .blog_nav .dropdown-menu #lable1,
+    .blog_nav .dropdown-menu #lable3,
+    /* .blog_nav .dropdown-menu #lable8, */
+    .blog_nav .dropdown-menu #lable6,
+    .blog_nav .dropdown-menu #lable9,
+    .blog_nav .dropdown-menu #lable7 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* height:250px;
+        width: 500px;
+        overflow-y:auto; */
+    }
+
+    .blog_nav .dropdown-menu #lable8,
+    .blog_nav .dropdown-menu #lable4,
+    .blog_nav .dropdown-menu #lable5 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* height: 150px;
+            overflow-y: scroll; */
+    }
+}
+
+.blog_nav .right .blog_search {
+    cursor: pointer;
+}
+
+.blog_nav .right .blog_search .searchIcon {
+    background-color: #1252AE;
+    padding: 0.5rem;
+}
+
+.blog_nav .right .blog_search .blog_input {
+    position: absolute;
+    background-color: #1252AE;
+    right: 0;
+    bottom: -2.8rem;
+    padding-left: 0.5rem;
+}
+
+.blog_nav .right .blog_search .blog_input .input {
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+.blog_nav .right .blog_search .blog_input button {
+    background-color: #5F96E5;
+    outline: none;
+    border: none;
+}
+
+@media (max-width:575px) {
+
+    .blog_nav .right .blog_search .blog_input {
+        left: -50%;
+        transform: translate(-50%, -50%);
+        min-width: fit-content;
+        bottom: -4.7rem
+    }
+}
+
+@media (max-width:426px) {
+    .offcanvas {
+        width: 100% !important;
+    }
+}
+
+.custom-dropdown{
+    min-height: auto;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.custom-dropdown::-webkit-scrollbar{
+    width: 3px !important;    
+}
+
+.custom-dropdown::-webkit-scrollbar-thumb{
+    background-color: gray;
+    border-radius: 10px;    
+}
+
+.custom-dropdown-item{
+    color: gray;
+}
+
+.custom-dropdown-item:hover{
+    color: #1252AE !important;
+}
+
+
+.navcant{
+    display: flex;
+        /* flex-direction: column;
+       justify-content: flex-start;
+       align-items: flex-start;
+        */
+       
+   padding: 0.1rem;    
+       
+}
+
+@media screen and (min-width: 992px) {
+    .navcant {
+        flex-direction: row;
+        justify-content: space-between;
+        /* border: 2px solid red; */
+      
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1137px) {
+    .navcant {
+        flex-direction: row;
+        justify-content: flex-start;
+       
+    }
+}

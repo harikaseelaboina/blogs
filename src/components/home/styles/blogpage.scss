@@ -1,0 +1,519 @@
+.heading {
+  background: linear-gradient(
+    315deg,
+    #1a233314 10.13%,
+    rgba(137, 178, 255, 0.347) 93.15%
+  );
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-between;
+  padding: 1.2rem 1rem 1.2rem 2rem;
+  .title {
+    font-size: 1.7vw;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .link {
+    a {
+      font-size: 1.2vw;
+      font-weight: 800;
+    }
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 380px) and (max-width: 576px) {
+  .heading {
+    padding: 1rem 1rem 1rem 1.5rem;
+    .title {
+      font-size: 2.2vw;
+    }
+    .link {
+      a {
+        font-size: 1.8vw;
+      }
+    }
+  }
+}
+
+.blogHero {
+  color: white;
+  // width: 90%;
+  margin: 0 auto;
+  min-height: 100%;
+  // height: 50vh;
+  height: 20rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  #title-1 {
+    // font-size: 2.3rem;
+    font-size: 2.3vw;
+    font-weight: 500;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+  }
+  #title-2 {
+    // font-size: 4rem;
+    font-size: 4.2vw;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+@media (max-width: 576px) {
+  .blogHero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0px !important;
+    #title-1 {
+      font-size: 3.2vw;
+      width: 90%;
+    }
+    #title-2 {
+      margin-top: 1rem;
+      font-size: 5.2vw;
+    }
+  }
+}
+////////////////////////////////
+.homeSearch {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // width: 90%;
+  margin: 2rem auto;
+  #search-nav {
+    width: 90%;
+    border-radius: 20px;
+    background-color: rgb(26, 35, 51);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 0.5rem;
+    span {
+      background-color: rgb(14, 20, 32);
+      padding: 0.4rem 1.2rem;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    ul {
+      display: flex;
+      flex-direction: row;
+      margin-top: 0.5rem;
+      padding: 0;
+      :last-child {
+        border-right: none;
+      }
+
+      li {
+        border-right: 1px solid #9f9f9f82;
+        padding: 0.8rem 0.4rem 0.8rem 0rem;
+        margin-left: 0.8rem;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
+  #search-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    span {
+      margin: 0 0.5rem;
+    }
+  }
+}
+////////////////////////////////////////////////
+.headlines {
+  overflow-x: hidden;
+  color: white;
+  // width: 90%;
+  margin: 2rem auto;
+  border-radius: 20px;
+  height: 6rem;
+  #headline-title {
+    img {
+      // margin: 0 0.7rem;
+      width: 4.2vw;
+      height: 8.9vh;
+    }
+  }
+  #headline-articles {
+    z-index: 2;
+    // padding: 0.4rem 0;
+    display: flex;
+    flex-direction: row;
+    animation: move linear 15s infinite;
+    // overflow-x: hidden;
+    .articleDiv {
+      background-color: rgb(26, 35, 51);
+      width: 25vw;
+      margin-right: 1rem;
+
+      .articleText {
+        font-weight: 700;
+        font-size: 1vw;
+      }
+    }
+  }
+
+  @keyframes move {
+    0% {
+      transform: translate3d(90%, 0, 0);
+    }
+    100% {
+      transform: translate3d(-100%, 0, 0);
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .headlines {
+    overflow-x: hidden;
+    color: white;
+    // width: 90%;
+    margin: 2rem auto;
+    border-radius: 20px;
+    height: 5rem;
+    #headline-title {
+      div {
+        h5 {
+          font-size: 2.2vw;
+        }
+      }
+      img {
+        // margin: 0 0.7rem;
+        width: 4.8vw;
+        height: 6vh;
+      }
+    }
+    #headline-articles {
+      z-index: 2;
+      // padding: 0.4rem 0;
+      display: flex;
+      flex-direction: row;
+      animation: move linear 15s infinite;
+      // overflow-x: hidden;
+      .articleDiv {
+        background-color: rgb(26, 35, 51);
+        width: 30vw;
+        margin-right: 1rem;
+
+        .articleText {
+          font-weight: 700;
+          font-size: 1.2vw;
+        }
+      }
+    }
+
+    @keyframes move {
+      0% {
+        transform: translate3d(70%, 0, 0);
+      }
+      100% {
+        transform: translate3d(-100%, 0, 0);
+      }
+    }
+  }
+}
+@media (min-width: 390px) and (max-width: 575px) {
+  .headlines {
+    overflow-x: hidden;
+    color: white;
+    // width: 90%;
+    margin: 2rem auto;
+    border-radius: 20px;
+    height: 4rem;
+    #headline-title {
+      div {
+        h5 {
+          padding-top: 0.5rem;
+          font-size: 3vw;
+        }
+      }
+      img {
+        // margin: 0 0.7rem;
+        width: 6.8vw;
+        height: 6vh;
+      }
+    }
+    #headline-articles {
+      z-index: 2;
+      // padding: 0.4rem 0;
+      display: flex;
+      flex-direction: row;
+      animation: move linear 15s infinite;
+      // overflow-x: hidden;
+      .articleDiv {
+        background-color: rgb(26, 35, 51);
+        width: 44vw;
+        margin-right: 1rem;
+
+        .articleText {
+          font-weight: 700;
+          font-size: 2vw;
+        }
+      }
+    }
+
+    @keyframes move {
+      0% {
+        transform: translate3d(50%, 0, 0);
+      }
+      100% {
+        transform: translate3d(-100%, 0, 0);
+      }
+    }
+  }
+}
+////////////////////////////////////////////////
+.mainNews {
+  // width: 90%;
+  margin: 0 auto;
+}
+///////////////////////////////////////////////
+.featuredNews {
+  // width: 90%;
+  margin: 0 auto;
+}
+///////////////////////////////////////////////
+.realEstateNews {
+  // width: 90%;
+  margin: 0 auto;
+}
+//////////////////////////////////////////////
+.landRecords,
+.financialMeasurements,
+.astrologyVastu,
+.stock,
+.celebHomes,
+.interiorDecor,
+.aadharCard {
+  // width: 90%;
+  margin: 2rem auto;
+
+  // .cardContainer {
+  //   .article-aside {
+  //     height: 34rem;
+  //   }
+  // }
+}
+
+@media (min-width: 380px) and (max-width: 576px) {
+  .landRecords,
+  .financialMeasurements,
+  .astrologyVastu,
+  .stock,
+  .celebHomes,
+  .interiorDecor,
+  .aadharCard {
+    // width: 90%;
+    margin: 2rem auto;
+
+    // .cardContainer {
+    //   .article-aside {
+    //     height: 21.5rem;
+    //   }
+    // }
+  }
+}
+
+//////////////////////////////////////////////
+.hotTopics {
+  // border: 1px solid white;
+  // width: 90%;
+  margin: 2rem auto;
+
+  .cardBody {
+    background-color: rgba(0, 0, 0, 0.637);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 86%;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    border-radius: 20px;
+
+    .text-1 {
+      text-align: start;
+      width: 90%;
+      margin: 0 auto;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .text-2 {
+      text-align: start;
+      width: 90%;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+  }
+}
+////////////////////////////////////////////////
+.trendingNews {
+  // border: 1px solid white;
+  // width: 90%;
+  margin: 2rem auto;
+}
+////////////////////////////////////////////////
+.blogSubscribe {
+  background-color: rgb(26, 35, 51);
+  // max-height: 100%;
+  // height: 66vh;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // max-width: 100%;
+  height: 66vh;
+  .row {
+    // width: 80%;
+    // margin: 0 auto;
+    min-height: 100%;
+    #subscribe-img {
+      // padding-right: 1rem;
+      img {
+        height: 60vh;
+        margin: 0 auto;
+      }
+    }
+    #subscribe-text {
+      #mail-box {
+        #form-heading {
+          font-size: 6vh;
+        }
+        #subscribe-input {
+          input {
+            border: 3.5px solid rgb(151, 71, 255);
+            font-size: 2.8vh;
+            padding: 0.5rem 2rem;
+            border-radius: 30px;
+            width: 100%;
+            color: white;
+            background: transparent;
+            outline: none;
+          }
+        }
+        #subscribe-btn {
+          button {
+            color: white;
+            font-weight: 500;
+            font-size: 2.3vh;
+            background-color: rgb(102, 109, 200);
+            width: 9rem;
+            padding: 0.8rem 0;
+            border-radius: 30px;
+            box-shadow: inset 0px 5px 5px rgb(86, 80, 158);
+          }
+        }
+        #consent-note {
+          font-weight: 300;
+          font-size: 2.2vh;
+        }
+        // margin: 1rem 0;
+        // form {
+        //   input {
+        //     border: 3.5px solid rgb(151, 71, 255);
+        //     font-size: 1.2vw;
+        //     padding: 0.5rem 2rem;
+        //     border-radius: 30px;
+        //     width: 100%;
+        //     color: white;
+        //     background: transparent;
+        //     outline: none;
+        //   }
+        //   button {
+        //     color: white;
+        //     font-weight: 500;
+        //     font-size: 1.1vw;
+        //     background-color: rgb(102, 109, 200);
+        //     width: 25%;
+        //     padding: 0.8rem 0;
+        //     border-radius: 30px;
+        //     box-shadow: inset 0px 5px 5px rgb(86, 80, 158);
+        //   }
+        // }
+      }
+    }
+  }
+}
+
+@media (min-width: 500px) and (max-width: 992px) {
+  .blogSubscribe {
+    background-color: rgb(26, 35, 51);
+    height: 100%;
+    .row {
+      // min-height: 100%;
+      #subscribe-text {
+        padding: 1rem 1rem;
+      }
+    }
+  }
+}
+@media (min-width: 380px) and (max-width: 499px) {
+  .blogSubscribe {
+    background-color: rgb(26, 35, 51);
+    height: 100%;
+    .row {
+      #subscribe-img {
+        // padding-right: 1rem;
+        img {
+          height: 36vh;
+          margin: 0 auto;
+        }
+      }
+
+      #subscribe-text {
+        #mail-box {
+          #form-heading {
+            font-size: 3vh;
+            width: 100%;
+            text-align: center;
+            margin: 0 auto;
+          }
+          #subscribe-btn {
+            justify-content: center;
+          }
+          #consent-note {
+            text-align: justify;
+          }
+        }
+      }
+    }
+  }
+}
+
+/////////////////////////////////////
+// .swiper-container {
+//   width: 480px;
+// }
+
+@media screen and (min-width: 992px) {
+  .swiper-container {
+    width: 992px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .swiper-container {
+    width: 576px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .swiper-container {
+    width: 380px;
+  }
+}

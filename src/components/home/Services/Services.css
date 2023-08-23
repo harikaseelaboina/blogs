@@ -1,0 +1,102 @@
+.ourservicemain {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    align-items: justify;
+
+}
+
+.listsym {
+    list-style-type: square;
+}
+
+.section1 {
+
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+
+
+.container-top {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.description-top {
+    padding: 2px;
+    margin-top: 2rem;
+}
+
+.cards-top {
+    padding-top: 2px;
+    padding-bottom: 20px;
+    padding-right: 5px;
+    padding-left: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-top {
+    width: calc(40% - 10px);
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin-bottom: 0px;
+
+}
+
+
+.para1 {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+.maindiv {
+    font-weight: bold;
+}
+
+.why {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.realestate_bg {
+    background-image: url("https://res.cloudinary.com/dyylqn8vb/image/upload/v1686147494/gradient-dark-dynamic-lines-background_23-2148995950_rlmuqt.avif");
+    background-size: contain;
+}
+
+
+.firstpart {
+
+    color: #fff;
+    padding-bottom: 0.2rem;
+    border-bottom: 2px solid #fff
+}
+
+.secpart {
+    color: #1252ae;
+    padding-bottom: 0.2rem;
+    position: relative
+}
+
+.secpart::after {
+    position: absolute;
+    content: "";
+    width: 35%;
+    background-color: #1252ae;
+    height: 2px;
+    bottom: -0.15rem;
+    left: .6rem
+}
+
+.secpart::before {
+    position: absolute;
+    content: "";
+    width: 18%;
+    background-color: #1252ae;
+    height: 1px;
+    left: 50%;
+    bottom: -0.15rem
+}

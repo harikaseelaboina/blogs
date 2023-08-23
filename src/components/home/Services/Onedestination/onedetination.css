@@ -1,0 +1,324 @@
+.oneDestination {
+  color: white;
+}
+
+.oneDestination .od_inner {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.oneDestination .oneDestination_heading h2 {
+  font-size: 1rem;
+}
+
+.oneDestination .oneDestination_heading h2 .first {
+  padding-bottom: 0.1rem;
+  border-bottom: 2px solid white;
+}
+
+.oneDestination .oneDestination_heading h2 .secound {
+  /* color: #1252ae; */
+  color: #C88F63;
+  position: relative;
+}
+
+.oneDestination .oneDestination_heading h2 .secound::after {
+  position: absolute;
+  content: "";
+  /* background-color: #1253aebc; */
+  background-color: #C88F63;
+  height: 2px;
+  width: 4rem;
+  left: 0.7rem;
+  bottom: -0.3rem;
+}
+
+.oneDestination .oneDestination_heading h2 .secound::before {
+  position: absolute;
+  content: "";
+  /* background-color: #1253ae6f; */
+  background-color: black;
+  height: 1px;
+  width: 3rem;
+  left: 6rem;
+  bottom: -0.35rem;
+}
+
+.od_cards_container {
+  height: 20rem;
+  margin-top: 1rem;
+}
+
+/* Card */
+.od_cards_container .od_card {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-repeat: no-repeat !important;
+  background-size: 40px !important;
+  background-position: right 1rem !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.od_cards_container .od_card::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: no-repeat url("../../Assets/icons/cloud.png");
+  background-size: 55px;
+
+  background-position: right bottom;
+  bottom: -0.4rem;
+  right: 0;
+}
+
+.od_cards_container .od_card .od_card_title {
+  font-size: 0.55rem;
+  max-width: 80%;
+  margin: 0;
+  color: #C88F63;
+  font-weight: bold;
+}
+
+.od_cards_container .od_card ul {
+  list-style: disc;
+  font-size: 0.4rem;
+  font-weight: 600;
+  /* color: #b7dcff; */
+  max-width: 85%;
+  padding-left: 0.7rem !important;
+}
+
+.od_cards_container .od_card .od_card__btn {
+  /* background-color: #cde4ff; */
+  background-color:#C88F63;
+  max-width: fit-content;
+  color: black;
+  font-weight: 400;
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.55rem;
+}
+
+/* Swiper */
+.od_cards_container .od_cards_swiper {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: transparent;
+}
+
+.od_cards_container .od_cards_swiper .swiper-slide {
+  text-align: left;
+  background: transparent;
+  height: 125px;
+}
+
+.od_cards_container .od_cards_swiper .swiper-pagination .swiper-pagination-bullet {
+  background-color: #181818;
+  width: 10px;
+  height: 10px;
+}
+
+.od_cards_container .od_cards_swiper .swiper-pagination .swiper-pagination-bullet-active {
+  /* background-color: blue; */
+  background-color: #C88F63;
+}
+
+.od_cards_container .swipBtns {
+  color: black;
+}
+
+.od_cards_container .prevBtn,
+.od_cards_container .nextBtn {
+  position: absolute;
+  top: 45.2%;
+  transform: translate(-50%, -50%);
+}
+
+.od_cards_container .prevBtn {
+  left: -0.2rem;
+}
+
+.od_cards_container .nextBtn {
+  right: -3rem;
+}
+
+.od_cards_container .swiper-button-disabled {
+  opacity: 0.35;
+}
+
+
+@media (max-width: 639px) {
+  .od_cards_container {
+    height: 19rem;
+  }
+
+  .od_cards_container .nextBtn {
+    right: -1.5rem !important;
+  }
+
+  .od_cards_container .prevBtn,
+  .od_cards_container .nextBtn {
+    top: 43%;
+  }
+}
+
+@media (min-width: 640px) {
+  .oneDestination .oneDestination_heading h2 {
+    font-size: 1.2rem;
+  }
+
+  .od_cards_container {
+    height: 20rem;
+    margin-top: 1.5rem;
+  }
+
+  .od_cards_container .od_card .od_card_title {
+    font-size: 0.8rem;
+  }
+
+  .od_cards_container .od_card ul {
+    font-size: 0.6rem;
+    max-width: 90%;
+  }
+
+  .od_cards_container .od_card .od_card__btn {
+    left: 1rem;
+    bottom: 0.8rem;
+    font-size: 0.6rem;
+    padding: 0.1rem 0.5rem;
+  }
+
+  .od_cards_container .prevBtn,
+  .od_cards_container .nextBtn {
+    top: 41%;
+    /* right: 0rem; */
+  }
+  .od_cards_container .prevBtn{
+    left: -1.0rem;
+  }
+  .od_cards_container .nextBtn {
+    right: -2.0rem;
+  }
+}
+
+@media (min-width: 830px) {
+
+  .oneDestination .oneDestination_heading h2 {
+    font-size: 2rem;
+  }
+
+  .oneDestination .oneDestination_heading h2 .first {
+    border-bottom: 3px solid white;
+  }
+
+  .oneDestination .oneDestination_heading h2 .secound::after {
+    width: 50%;
+  }
+
+  .oneDestination .oneDestination_heading h2 .secound::before {
+    width: 40%;
+    left: 12rem;
+  }
+
+  .od_cards_container {
+    margin-top: 1.7rem;
+  }
+
+  .od_cards_container {
+    height: 23rem;
+  }
+
+  .od_cards_container .od_cards_swiper .swiper-slide {
+    height: 140px;
+  }
+
+  .od_cards_container .od_card .od_card_title {
+    font-size: 0.9rem;
+  }
+
+  .od_cards_container .od_card ul {
+    font-size: 0.65rem;
+  }
+
+  .od_cards_container .od_card .od_card__btn {
+    padding: 0.2rem 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  .od_cards_container .od_card::before {
+    background-size: 80px;
+  }
+
+  .od_cards_container .od_card {
+    background-size: 48px !important;
+  }
+
+  .od_cards_container .prevBtn,
+  .od_cards_container .nextBtn {
+    top: 41%;
+  }
+}
+
+@media (min-width: 825px) {
+
+  .od_cards_container .prevBtn,
+  .od_cards_container .nextBtn {
+    top: 45%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .od_cards_container {
+    height: 28.5rem;
+  }
+
+  .od_cards_container .od_cards_swiper .swiper-slide {
+    height: 180px;
+
+  }
+
+  .od_cards_container .od_card .od_card_title {
+    font-size: 1.2rem;
+  }
+
+  .od_cards_container .od_card ul {
+    font-size: 0.8rem;
+    padding-top: 1rem !important;
+  }
+
+  .od_cards_container .od_card .od_card__btn {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .od_cards_container .od_card::before {
+    background-size: 90px;
+  }
+
+  .od_cards_container .od_card {
+    background-size: 58px !important;
+  }
+
+  .od_cards_container .prevBtn,
+  .od_cards_container .nextBtn {
+    top: 45%;
+  }
+}
+
+/* @media (max-width:825px) {
+  .od_cards_container .nextBtn {
+    right: -2.2rem !important;
+  }
+
+  .od_cards_container .prevBtn,
+  .od_cards_container .nextBtn {
+    top: 40.2%;
+  }
+} */

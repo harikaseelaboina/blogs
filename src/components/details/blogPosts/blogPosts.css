@@ -1,0 +1,43 @@
+.blogPosts {
+    background-color: #1A2333;
+}
+
+.blog .blogPosts_title::after {
+    position: absolute;
+    content: '';
+    width: 80%;
+    height: 4px;
+    bottom: -0.4rem;
+    background: linear-gradient(159deg, #569BFF, rgba(86, 155, 255, 0.00));
+}
+
+/* Post */
+.blogPosts .post {
+    /* background-color: #0E1420; */
+   
+}
+
+.blogPosts .post .post_img {
+    width: 150px;
+    height: 80px;
+}
+
+.blogPosts .post .post_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blogPosts .post:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+.blogPosts .post .title {
+    font-size: 0.9rem;
+    text-align: start;
+}
+
+.blogPosts .post p {
+    font-size: 0.7rem;
+    text-align:left;
+}
