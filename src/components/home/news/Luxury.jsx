@@ -12,7 +12,7 @@ const LuxuryProjects = (props) => {
   const mainStyle = {
     // width: "100%",
     // margin: "0 auto",
-    minHeight: "100%",
+    // minHeight: "100%",
     marginBottom:"1rem"
   };
   return (
