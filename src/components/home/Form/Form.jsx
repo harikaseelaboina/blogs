@@ -88,7 +88,7 @@ const Form = ({ close }) => {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            borderRadius: "24px",
+           
                   backgroundColor:" #BBA592",
             padding: "0.5rem",
           }}
