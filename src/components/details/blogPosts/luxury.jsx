@@ -12,8 +12,10 @@ const LuxuryProjects = (props) => {
   const mainStyle = {
     // width: "100%",
     // margin: "0 auto",
-    minHeight: "100%",
-    marginBottom:"1rem"
+    // minHeight: "100%",
+    
+    marginBottom:"3.5rem",
+    // border:"2px black solid"
   };
   return (
     <>

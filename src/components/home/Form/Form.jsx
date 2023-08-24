@@ -93,7 +93,7 @@ const Form = ({ close }) => {
             padding: "0.5rem",
           }}
         >
-          {close == "true" && (
+          {close == "false" && (
             <button
               type="button"
               className="btn-close"
