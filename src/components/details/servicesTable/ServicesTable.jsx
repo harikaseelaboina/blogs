@@ -7,7 +7,7 @@ import ServiceCard from "./ServiceCard";
 
 const ServicesTable = () => {
   return (
-    <div className="servicesTable " style={{marginBottom:"1rem"}}>
+    <div className="servicesTable" style={{marginBottom:"1rem"}}>
       <div className="services_bg position-relative">
         <div className="bg_img overflow-hidden ">
           <img src={bgImg} alt="" />

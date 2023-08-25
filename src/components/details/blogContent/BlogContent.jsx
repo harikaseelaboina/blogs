@@ -105,9 +105,9 @@ const BlogContent = ({ data, setDataHeight }) => {
         </Swiper>
 
         <div
-          className=" sideimg share position-absolute p-3"
+          className=" sideimg share position-absolute"
           style={{
-            backgroundColor: "transperent",
+            background: "rgb(0,0,0,0.9)",
             display: "flex",
             flexDirection: "column",
             height: "100%",
@@ -152,7 +152,7 @@ const BlogContent = ({ data, setDataHeight }) => {
               src="https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/Alarm_Clock_GIF_Animation_High_Res_6bb6171f24.gif"
               style={{ height: "20px" }}
             />
-            <p className="timetext">
+            <p className="timetext text-white ">
               {blog?.attributes?.blog_info?.read_time} min
             </p>
           </div>

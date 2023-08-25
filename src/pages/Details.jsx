@@ -139,10 +139,7 @@ const Blogs = () => {
                 category={data[0]?.attributes?.category}
               />
 
-              
-
-             
-              <LuxuryProjects/>
+              <LuxuryProjects />
               <ServicesTable />
               <div
                 style={{

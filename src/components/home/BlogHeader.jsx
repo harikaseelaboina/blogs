@@ -77,32 +77,60 @@ let navLinks = [
   // },
 ];
 
+// const social = [
+//   {
+//     name: "Instagram",
+//     icon: instagram,
+//     link: "https://www.instagram.com/homznoffiz/",
+//   },
+//   {
+//     name: "LinekdIn",
+//     icon: linkedIn,
+//     link: "https://www.linkedin.com/company/homznoffiz/",
+//   },
+//   {
+//     name: "Facebook",
+//     icon: facebook,
+//     link: "https://www.facebook.com/homznoffiz/",
+//   },
+//   {
+//     name: "Twitter",
+//     icon:twitter,
+//     link: "#",
+//   },
+//   // {
+//   //   name: "Threads",
+//   //   icon: "https://seeklogo.com/images/T/threads-by-instagram-logo-20008C5295-seeklogo.com.png?v=638243447960000000",
+//   //   link: "#",
+//   // },
+// ];
+
 const social = [
   {
     name: "Instagram",
-    icon: instagram,
+    icon: "https://img.icons8.com/?size=512&id=Xy10Jcu1L2Su&format=png",
     link: "https://www.instagram.com/homznoffiz/",
   },
   {
     name: "LinekdIn",
-    icon: linkedIn,
+    icon: "https://img.icons8.com/?size=512&id=xuvGCOXi8Wyg&format=png",
     link: "https://www.linkedin.com/company/homznoffiz/",
   },
   {
     name: "Facebook",
-    icon: facebook,
+    icon: "https://img.icons8.com/?size=512&id=uLWV5A9vXIPu&format=png",
     link: "https://www.facebook.com/homznoffiz/",
   },
   {
     name: "Twitter",
-    icon:twitter,
+    icon: "https://img.icons8.com/?size=512&id=5MQ0gPAYYx7a&format=png",
     link: "#",
   },
-  // {
-  //   name: "Threads",
-  //   icon: "https://seeklogo.com/images/T/threads-by-instagram-logo-20008C5295-seeklogo.com.png?v=638243447960000000",
-  //   link: "#",
-  // },
+  {
+    name: "Threads",
+    icon: "https://seeklogo.com/images/T/threads-by-instagram-logo-20008C5295-seeklogo.com.png?v=638243447960000000",
+    link: "#",
+  },
 ];
 
 const BlogHeader = () => {
@@ -298,9 +326,21 @@ const BlogHeader = () => {
                     alt="..."
                     style={{ width: "11px", height: "11px" }}
                   />
-                  <img src={instagram} alt="..."  style={{ width: "11px", height: "11px" }} />
-                  <img src={linkedIn} alt="..."  style={{ width: "11px", height: "11px" }}/>
-                  <img src={twitter} alt="..."  style={{ width: "11px", height: "11px" }}/>
+                  <img
+                    src={instagram}
+                    alt="..."
+                    style={{ width: "11px", height: "11px" }}
+                  />
+                  <img
+                    src={linkedIn}
+                    alt="..."
+                    style={{ width: "11px", height: "11px" }}
+                  />
+                  <img
+                    src={twitter}
+                    alt="..."
+                    style={{ width: "11px", height: "11px" }}
+                  />
                 </div>
               </div>
               {show && (

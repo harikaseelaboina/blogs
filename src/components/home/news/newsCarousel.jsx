@@ -44,13 +44,14 @@ const NewsCarousel = (props) => {
     backgroundSize: "cover",
     // minHeight: "100%",
     // height: "52.3vh",
+    // borderBottomRightRadius: "20px", borderBottomLeftRadius: "20px"
   };
 
   const navigate = useNavigate();
 
   const encryptVideoLink = (link) => {
     const data = CryptoJS.AES.encrypt(link, "12345678").toString();
-    console.log(data);
+    // console.log(data);
     navigate(`/playVideo/${data}`);
     // window.open(`${data}`, "_blank");
   };
@@ -124,7 +125,7 @@ const NewsCarousel = (props) => {
                 </div>
                 <a
                   href={`/details/${item.id}`}
-                  className="card w-100 d-flex flex-column justify-content-end "
+                  className="card w-100 d-flex flex-column justify-content-end"
                   style={{
                     ...cardStyle,
                     backgroundColor: "#242c4a",

@@ -84,25 +84,25 @@ const BlogPage = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  useEffect(() => {
-    // Set the default image initially
-    setDefaultImage();
+  // useEffect(() => {
+  //   // Set the default image initially
+  //   setDefaultImage();
 
-    // Change the image every 4 seconds (4000ms)
-    const interval = setInterval(() => {
-      // Generate a random image index (except the current index)
-      let randomIndex;
-      do {
-        randomIndex = Math.floor(Math.random() * heroImages.length);
-      } while (randomIndex === currentImageIndex);
+  //   // Change the image every 4 seconds (4000ms)
+  //   const interval = setInterval(() => {
+  //     // Generate a random image index (except the current index)
+  //     let randomIndex;
+  //     do {
+  //       randomIndex = Math.floor(Math.random() * heroImages.length);
+  //     } while (randomIndex === currentImageIndex);
 
-      setCurrentImageIndex(randomIndex);
-      changeImage(randomIndex);
-    }, 2000);
+  //     setCurrentImageIndex(randomIndex);
+  //     changeImage(randomIndex);
+  //   }, 2000);
 
-    // Clean up the interval when the component unmounts
-    return () => clearInterval(interval);
-  }, []);
+  //   // Clean up the interval when the component unmounts
+  //   return () => clearInterval(interval);
+  // }, []);
 
   const [formData, setFormData] = useState({ email: "" });
 
@@ -151,15 +151,10 @@ const BlogPage = () => {
           <section className="blogHeader">
             <BlogHeader />
           </section>
-          <section
+          {/* <section
             // className="blogHero rounded-bottom-4"
             className="blogHero"
             id="blog-hero"
-            style={
-              {
-                // height: "22rem",
-              }
-            }
           >
             <span
               id="title-1"
@@ -172,7 +167,6 @@ const BlogPage = () => {
                 borderTopRightRadius: "1.5rem",
               }}
             >
-              {/* Your Ultimate guide to successful innovation projects with */}
               Discover Your Home With
             </span>
             <span
@@ -188,6 +182,115 @@ const BlogPage = () => {
               Homz<span className="text-white">N</span>Offiz{" "}
               <span className="text-white">Blogs</span>
             </span>
+          </section> */}
+          <section>
+            {/* <div
+              className=" z-2 text-center "
+              style={{
+                left: "50%",
+              }}
+            >
+              <span
+                id="title-1"
+                style={{
+                  fontSize: "2.3rem",
+                  // background: "rgba(0, 0, 0, 0.7)",
+                  paddingLeft: "1rem",
+                  paddingRight: "1rem",
+                  borderTopLeftRadius: "1.5rem",
+                  borderTopRightRadius: "1.5rem",
+                }}
+              >
+                Discover Your Home With
+              </span>
+              <span
+                id="title-2"
+                style={{
+                  fontSize: "3rem",
+                  // background: "rgba(0, 0, 0, 0.7)",
+                  borderBottomLeftRadius: "1.5rem",
+                  borderBottomRightRadius: "1.5rem",
+                }}
+                className="text-primary"
+              >
+                Homz<span className="text-white">N</span>Offiz{" "}
+                <span className="text-white">Blogs</span>
+              </span>
+            </div> */}
+            <Swiper
+              // slidesPerView={1}
+              spaceBetween={15}
+              loop={true}
+              // loopedSlides="auto"
+              navigation={false}
+              pagination={false}
+              keyboard={true}
+              modules={[Navigation, Pagination, Keyboard, Autoplay]}
+              className="mySwiper my-3 bg-transparent"
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                400: {
+                  slidesPerView: 1,
+                },
+                620: {
+                  slidesPerView: 1,
+                },
+                850: {
+                  slidesPerView: 1,
+                },
+                1000: {
+                  slidesPerView: 1,
+                },
+                1500: {
+                  slidesPerView: 1,
+                },
+              }}
+            >
+              {[...Array(7).keys()].map((key) => (
+                <SwiperSlide>
+                  <div className="blogHero">
+                    <img className="h-100 w-100" src={heroImages[key]} />
+                    <div className=" position-absolute z-2 d-flex justify-content-center align-items-center w-100 h-100 ">
+                      <div className="mx-auto">
+                        <div
+                          id="title-1"
+                          style={{
+                            fontSize: "2.3rem",
+                            // background: "rgba(0, 0, 0, 0.7)",
+                            paddingLeft: "1rem",
+                            paddingRight: "1rem",
+                            borderTopLeftRadius: "1.5rem",
+                            borderTopRightRadius: "1.5rem",
+                          }}
+                          className="w-auto"
+                        >
+                          Discover Your Home With
+                        </div>
+                        <div
+                          id="title-2"
+                          style={{
+                            fontSize: "3rem",
+                            // background: "rgba(0, 0, 0, 0.7)",
+                            borderBottomLeftRadius: "1.5rem",
+                            borderBottomRightRadius: "1.5rem",
+                          }}
+                          className="text-primary"
+                        >
+                          Homz<span className="text-white">N</span>Offiz{" "}
+                          <span className="text-white">Blogs</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </section>
           <div className="py-2"></div>
           <section

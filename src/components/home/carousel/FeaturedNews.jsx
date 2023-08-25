@@ -108,9 +108,10 @@ const FeaturedNews = (props) => {
                     <div
                       className="col-11 text-white mt-1 ms-3"
                       style={{
-                        fontSize: "1rem",
+                        fontSize: "0.8rem",
                         height: "6rem",
                         overflow: "hidden",
+                        textAlign: "justify",
                       }}
                     >
                       {/* <ReactMarkdown
@@ -120,7 +121,7 @@ const FeaturedNews = (props) => {
                           )}
                           remarkPlugins={[remarkGfm]}
                         /> */}
-                      {item.attributes.blog_info.main_content.slice(0, 120)}
+                      {item.attributes.blog_info.main_content.slice(0, 160)}
                       ...
                     </div>
                   </div>

@@ -17,7 +17,7 @@ import "./styles.css";
 
 const MainNewsCarousel = (props) => {
   const data = props.data;
-  console.log(data);
+  // console.log(data);
   const progressCircleRef = useRef(null);
   const progressContentRef = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
@@ -33,16 +33,16 @@ const MainNewsCarousel = (props) => {
     // background: "linear-gradient(rgba(0, 0, 0, 0.237),rgba(0,0,0,0.237))",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
-    borderBottomRightRadius:"2rem",
-    borderBottomLeftRadius:"2rem",
-    
+    borderBottomRightRadius: "2rem",
+    borderBottomLeftRadius: "2rem",
+
     // minHeight: "100%",
     // height: "52.3vh",
   };
   const navigate = useNavigate();
   const encryptVideoLink = (link) => {
     const data = CryptoJS.AES.encrypt(link, "12345678").toString();
-    console.log(data);
+    // console.log(data);
     navigate(`/playVideo/${data}`);
     // window.open(`${data}`, "_blank");
   };
@@ -52,10 +52,10 @@ const MainNewsCarousel = (props) => {
       className="maincar"
       style={{
         width: "100%",
-        margin:"auto",
+        margin: "auto",
 
         // border:"2px red solid",
-        marginTop:"0"
+        marginTop: "0",
       }}
     >
       {data && data.length > 0 && (
@@ -122,7 +122,6 @@ const MainNewsCarousel = (props) => {
                     ...cardStyle,
                     backgroundColor: "#242c4a",
 
-
                     // backgroundImage: `url(${item?.attributes?.blog_info?.image?.data?.[0].attributes.url})`,
                   }}
                 >
@@ -134,33 +133,36 @@ const MainNewsCarousel = (props) => {
                         backgroundColor: "#242c4a",
                         backgroundSize: "100% 100%",
 
-
-                        marginTop:"0",
-                        borderBottomRightRadius:"2rem",
-                        borderBottomLeftRadius:"2rem",
+                        marginTop: "0",
+                        borderBottomRightRadius: "2rem",
+                        borderBottomLeftRadius: "2rem",
                         backgroundImage: `url(${item?.attributes?.blog_info?.image?.data?.[0].attributes.url})`,
                       }}
-                    >
+                    ></div>
+                    <div className="position-absolute  p-5 bg-opacity-50 mainnewtxt">
+                      <div className="tittxt1 text-white text-start">
+                        Main News
+                      </div>
 
-                    </div>
-                    <div className="position-absolute  p-5 bg-opacity-50 mainnewtxt" >
+                      <div className="h3 text-white text-start tittxt">
+                        {item?.attributes?.main_title}
+                      </div>
 
-                    <div className="tittxt1 text-white text-start" >
-                      Main News
-                    </div>
-
-                    <div className="h3 text-white text-start tittxt" >
-                      {item?.attributes?.main_title}
-                    </div>
-
-                    <div
-                    //   style={{ fontSize: "15px" }}
-                      className="d-flex flex-row justify-content-between"
-                    >
-                         <div className="tittxt2 text-white text-start col-11" style={{letterSpacing:"0.3px"}}>
-                      {item?.attributes?.blog_info.main_content.slice(0, 450)}.....
-                    </div>
-                      {/* <span className="text-white d-flex flex-row align-items-center fw-bold">
+                      <div
+                        //   style={{ fontSize: "15px" }}
+                        className="d-flex flex-row justify-content-between"
+                      >
+                        <div
+                          className="tittxt2 text-white text-start col-11"
+                          style={{ letterSpacing: "0.3px" }}
+                        >
+                          {item?.attributes?.blog_info.main_content.slice(
+                            0,
+                            400
+                          )}
+                          .....
+                        </div>
+                        {/* <span className="text-white d-flex flex-row align-items-center fw-bold">
                         <img
                           src={clock}
                           alt="..."
@@ -174,18 +176,17 @@ const MainNewsCarousel = (props) => {
                           })
                           .replace(/\//g, "-")}
                       </span> */}
-                      <span className="txt1 col-1 text-white d-flex flex-row align-items-end fw-bold" style={{marginLeft:"0"}}>
-                        <img
-                          src={book}
-                          alt="..."
-                          className="img1"
-                        />
-                        <span className="text-white px-1">
-                          {item?.attributes?.blog_info?.read_time}
+                      </div>
+                      <span
+                          className="txt1 text-white d-flex justify-content-md-end justify-content-lg-end align-items-center fw-bold"
+                          // style={{ marginLeft: "0" }}
+                        >
+                          <img src={book} alt="..." className="img1 h-100 " />
+                          <span className="text-white px-1">
+                            {item?.attributes?.blog_info?.read_time}
+                          </span>
+                          minutes
                         </span>
-                        minutes
-                      </span>
-                    </div>
                     </div>
                   </div>
                 </a>

@@ -27,6 +27,8 @@ const TrendingNews = (props) => {
       // backgroundColor: "#BBA592",
       backgroundColor: "black",
       textAlign: "justify",
+      borderBottomRightRadius: "20px",
+      borderBottomLeftRadius: "20px",
     },
     text: {
       fontSize: "1rem",
@@ -64,12 +66,16 @@ const TrendingNews = (props) => {
       >
         {TrendingNewsData.map((item, index) => (
           <SwiperSlide key={index}>
-            <a href={`/details/${item.id}`} className="card text-white" style={cardStyle}>
+            <a
+              href={`/details/${item.id}`}
+              className="card text-white"
+              style={cardStyle}
+            >
               <img
                 src={
                   item?.attributes?.blog_info?.image?.data[0]?.attributes?.url
                 }
-                className="card-img-top"
+                className=" rounded-top-4 "
                 alt="..."
                 style={{ height: "13.0rem" }}
               />
