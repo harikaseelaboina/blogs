@@ -134,9 +134,9 @@ const Luxurycarousel = (props) => {
             const thumbnail =
               value.attributes.asset_images.data[0].attributes.url;
             let flatType = "";
-            value.attributes.bhk.data.map((val, index) => {
+            value.attributes.bhk?.data.map((val, index) => {
               flatType += `${val.attributes.bhk_type}`;
-              if (index !== value.attributes.bhk.data.length - 1) {
+              if (index !== value.attributes.bhk?.data.length - 1) {
                 flatType += ", ";
               }
               return flatType;
@@ -146,7 +146,7 @@ const Luxurycarousel = (props) => {
               flatType += " Bhk ";
             }
             return (
-              <SwiperSlide key={key}>
+              <SwiperSlide key={index}>
                 <div
                   style={{
                     // height: "luxcar",
@@ -198,7 +198,7 @@ const Luxurycarousel = (props) => {
                       border: "1px solid lightgray",
                       color: "black",
                     }}
-                    href="#"
+                    href={`${mainWebsite}/property`}
                   >
                     <span
                       style={{
@@ -207,7 +207,9 @@ const Luxurycarousel = (props) => {
                         fontWeight: "bold",
                       }}
                     >
-                      {propertyName}
+                      {propertyName.length > 25
+                        ? propertyName.slice(0, 25)+"..."
+                        : propertyName}
                     </span>
                     <span style={{ padding: "0.5rem", paddingTop: "0" }}>
                       {location}, {city}

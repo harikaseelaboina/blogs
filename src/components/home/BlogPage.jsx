@@ -380,7 +380,7 @@ const BlogPage = () => {
                         }
                         className="flex-shrink-0 me-3 rounded-end"
                         alt="..."
-                        // style={{ width: "40%" }}
+                        style={{ width: "40%" }}
                       />
                       <div
                         className="hedtxt d-flex flex-row align-items-center articleText"
@@ -390,7 +390,9 @@ const BlogPage = () => {
                     children={item?.attributes?.main_title}
                     remarkPlugins={[remarkGfm]}
                   /> */}
-                        {item.attributes.main_title}
+                        {item.attributes.main_title.length > 40
+                          ? item.attributes.main_title.slice(0, 40) + "..."
+                          : item.attributes.main_title}
                       </div>
                     </a>
                   ))}
