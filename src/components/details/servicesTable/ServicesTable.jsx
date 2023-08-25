@@ -9,7 +9,7 @@ const ServicesTable = () => {
   return (
     <div className="servicesTable" style={{marginBottom:"1rem"}}>
       <div className="services_bg position-relative">
-        <div className="bg_img overflow-hidden ">
+        <div className="bg_img overflow-hidden rounded-top-4">
           <img src={bgImg} alt="" />
         </div>
         <h3 className="title text-center text-white position-absolute">
@@ -18,7 +18,7 @@ const ServicesTable = () => {
           Endless Possibilities
         </h3>
       </div>
-      <div className="serviceCards py-3 px-2">
+      <div className="serviceCards py-3 px-2 rounded-bottom-4">
         <ServiceCard
           imgSrc="https://homznoffiz-tech.s3.ap-south-1.amazonaws.com/homw_loan_ab05b23873.gif"
           title="Home Loan"
