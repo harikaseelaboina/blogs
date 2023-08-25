@@ -256,40 +256,40 @@ const BlogPage = () => {
                 <SwiperSlide>
                   <div className="blogHero">
                     <img className="h-100 w-100" src={heroImages[key]} />
-                    <div className=" position-absolute z-2 d-flex justify-content-center align-items-center w-100 h-100 ">
-                      <div className="mx-auto">
-                        <div
-                          id="title-1"
-                          style={{
-                            fontSize: "2.3rem",
-                            // background: "rgba(0, 0, 0, 0.7)",
-                            paddingLeft: "1rem",
-                            paddingRight: "1rem",
-                            borderTopLeftRadius: "1.5rem",
-                            borderTopRightRadius: "1.5rem",
-                          }}
-                          className="w-auto"
-                        >
-                          Discover Your Home With
-                        </div>
-                        <div
-                          id="title-2"
-                          style={{
-                            fontSize: "3rem",
-                            // background: "rgba(0, 0, 0, 0.7)",
-                            borderBottomLeftRadius: "1.5rem",
-                            borderBottomRightRadius: "1.5rem",
-                          }}
-                          className="text-primary"
-                        >
-                          Homz<span className="text-white">N</span>Offiz{" "}
-                          <span className="text-white">Blogs</span>
-                        </div>
-                      </div>
-                    </div>
                   </div>
                 </SwiperSlide>
               ))}
+              <div className="position-absolute top-0 text-center z-2 d-flex justify-content-center align-items-center w-100 h-100 ">
+                <div className="mx-auto">
+                  <div
+                    id="title-1"
+                    style={{
+                      fontSize: "2.3rem",
+                      // background: "rgba(0, 0, 0, 0.7)",
+                      paddingLeft: "1rem",
+                      paddingRight: "1rem",
+                      borderTopLeftRadius: "1.5rem",
+                      borderTopRightRadius: "1.5rem",
+                    }}
+                    className="w-auto text-white "
+                  >
+                    Discover Your Home With
+                  </div>
+                  <div
+                    id="title-2"
+                    style={{
+                      fontSize: "3rem",
+                      // background: "rgba(0, 0, 0, 0.7)",
+                      borderBottomLeftRadius: "1.5rem",
+                      borderBottomRightRadius: "1.5rem",
+                    }}
+                    className="text-primary"
+                  >
+                    Homz<span className="text-white">N</span>Offiz{" "}
+                    <span className="text-white">Blogs</span>
+                  </div>
+                </div>
+              </div>
             </Swiper>
           </section>
           <div className="py-2"></div>
