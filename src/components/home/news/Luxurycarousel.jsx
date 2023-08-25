@@ -47,7 +47,7 @@ const Luxurycarousel = (props) => {
     axios
       .get(url)
       .then((res) => {
-        console.log("res", res?.data?.data);
+        // console.log("res", res?.data?.data);
         setProjects(res?.data?.data);
       })
       .catch((err) => {
@@ -55,7 +55,7 @@ const Luxurycarousel = (props) => {
       });
 
     return () => {};
-  }, [props]);
+  }, [projects]);
 
   console.log("data", data);
 
@@ -186,69 +186,72 @@ const Luxurycarousel = (props) => {
                       <BiSolidShareAlt color="white" size={20} />
                     </div>
                   </div>
-
-                  <a
+                  <div
                     style={{
-                      display: "flex",
-                      flexDirection: "column",
                       background: "rgb(187, 165, 146)",
+                      padding: "0.5rem",
                       borderBottomLeftRadius: "10px",
                       borderBottomRightRadius: "10px",
-                      padding: "0.5rem",
-                      border: "1px solid lightgray",
-                      color: "black",
                     }}
-                    href={`${mainWebsite}/property`}
                   >
-                    <span
-                      style={{
-                        padding: "0.5rem",
-                        paddingBottom: "0",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      {propertyName.length > 25
-                        ? propertyName.slice(0, 25)+"..."
-                        : propertyName}
-                    </span>
-                    <span style={{ padding: "0.5rem", paddingTop: "0" }}>
-                      {location}, {city}
-                    </span>
-
-                    <span
-                      style={{
-                        padding: "0.5rem",
-                        paddingTop: "1rem",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      <BsCurrencyRupee />{" "}
-                      <span>
-                        {Price} {unit1} to {Maximum} {unit2}
-                      </span>
-                    </span>
-                    <span
+                    <a
                       style={{
                         display: "flex",
-                        flexDirection: "row",
-                        justifyContent: "space-between",
-                        paddingTop: "0",
+                        flexDirection: "column",
+                        color: "black",
                       }}
+                      href={`${mainWebsite}/property`}
                     >
-                      <p
+                      <span
                         style={{
-                          paddingLeft: "0.5rem",
-                          fontSize: "12px",
-                          fontWeight: "500",
-                          margin: "0",
+                          padding: "0.5rem",
+                          paddingBottom: "0",
+                          fontWeight: "bold",
                         }}
                       >
-                        {flatType} {propertyType}
-                      </p>
-                      <p style={{ fontSize: "12px", fontWeight: "500" }}>
-                        {Saleable} - {Saleable2} SQ. FT.
-                      </p>
-                    </span>
+                        {propertyName.length > 25
+                          ? propertyName.slice(0, 25) + "..."
+                          : propertyName}
+                      </span>
+                      <span style={{ padding: "0.5rem", paddingTop: "0" }}>
+                        {location}, {city}
+                      </span>
+
+                      <span
+                        style={{
+                          padding: "0.5rem",
+                          paddingTop: "1rem",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        <BsCurrencyRupee />{" "}
+                        <span>
+                          {Price} {unit1} to {Maximum} {unit2}
+                        </span>
+                      </span>
+                      <span
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          justifyContent: "space-between",
+                          paddingTop: "0",
+                        }}
+                      >
+                        <p
+                          style={{
+                            paddingLeft: "0.5rem",
+                            fontSize: "12px",
+                            fontWeight: "500",
+                            margin: "0",
+                          }}
+                        >
+                          {flatType} {propertyType}
+                        </p>
+                        <p style={{ fontSize: "12px", fontWeight: "500" }}>
+                          {Saleable} - {Saleable2} SQ. FT.
+                        </p>
+                      </span>
+                    </a>
                     <span style={{ display: "flex", justifyContent: "center" }}>
                       <button
                         onClick={handleShowModal}
@@ -265,7 +268,7 @@ const Luxurycarousel = (props) => {
                         <Form close="true" />
                       </Modal>
                     </span>
-                  </a>
+                  </div>
                 </div>
               </SwiperSlide>
             );
