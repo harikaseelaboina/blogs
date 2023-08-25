@@ -28,6 +28,22 @@ import hero5 from "../../assets/blogs/Rectangle13.jpg";
 import hero6 from "../../assets/blogs/Rectangle14.jpg";
 import hero7 from "../../assets/blogs/Rectangle15.jpg";
 
+import h1 from "../../assets/home_carousel/1.jpeg";
+import h2 from "../../assets/home_carousel/2.jpeg";
+import h3 from "../../assets/home_carousel/3.jpeg";
+import h4 from "../../assets/home_carousel/4.jpeg";
+import h5 from "../../assets/home_carousel/5.jpeg";
+import h6 from "../../assets/home_carousel/6.jpeg";
+import h7 from "../../assets/home_carousel/7.jpeg";
+import h8 from "../../assets/home_carousel/8.jpeg";
+import h9 from "../../assets/home_carousel/9.jpeg";
+import h10 from "../../assets/home_carousel/10.jpeg";
+import h11 from "../../assets/home_carousel/11.jpeg";
+import h12 from "../../assets/home_carousel/12.jpeg";
+import h13 from "../../assets/home_carousel/13.jpeg";
+import h14 from "../../assets/home_carousel/14.jpeg";
+import h15 from "../../assets/home_carousel/15.jpeg";
+
 // import Header from "../layout/Header";
 import Header from "../layout/Header/Header";
 import BlogHeader from "./BlogHeader";
@@ -49,7 +65,24 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import LuxuryProjects from "./news/Luxury";
 
-const heroImages = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
+// const heroImages = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
+const heroImages = [
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  h7,
+  h8,
+  h9,
+  h10,
+  h11,
+  h12,
+  h13,
+  h14,
+  h15,
+];
 const changeImage = (index) => {
   const heroImg = (document.getElementById(
     "blog-hero"
@@ -252,7 +285,7 @@ const BlogPage = () => {
                 },
               }}
             >
-              {[...Array(7).keys()].map((key) => (
+              {[...Array(15).keys()].map((key) => (
                 <SwiperSlide>
                   <div className="blogHero">
                     <img className="h-100 w-100" src={heroImages[key]} />
@@ -285,8 +318,8 @@ const BlogPage = () => {
                     }}
                     className="text-primary"
                   >
-                    Homz<span className="text-white">N</span>Offiz{" "}
-                    <span className="text-white">Blogs</span>
+                    {/* Homz<span className="text-white">N</span>Offiz{" "} */}
+                    <span className="text-white">Real Estate Blogs</span>
                   </div>
                 </div>
               </div>
@@ -362,6 +395,10 @@ const BlogPage = () => {
                     </a>
                   ))}
               </div>
+            </section>
+
+            <section className="aadharcard">
+              <LuxuryProjects />
             </section>
 
             <section className="mainNews">
@@ -473,10 +510,6 @@ const BlogPage = () => {
             <section className="aadharCard">
               {/* <AadharCard GovtIdentityData={GovtIdentityData} /> */}
               <AadharCard />
-            </section>
-
-            <section className="aadharcard">
-              <LuxuryProjects />
             </section>
 
             <section className="onestop" style={{ borderRadius: "12px" }}>
