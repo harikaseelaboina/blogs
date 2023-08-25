@@ -13,6 +13,7 @@ import "./header.css";
 import { BlogsContext } from "../../context/CustomContextApi";
 
 import { BiChevronRight } from "react-icons/bi";
+import { mainWebsite } from "../../../config";
 
 const showInputBox = () => {
   document.querySelector(".box1").classList.toggle("d-none");
@@ -20,6 +21,36 @@ const showInputBox = () => {
 };
 const Header = () => {
   const blogNavLink = [
+    {
+      title: "Projects",
+      id: "Projects",
+      subLinks: [
+        {
+          link: "Plot",
+          to: "/all-properties",
+        },
+        {
+          link: "Villa",
+          to: "/all-properties",
+        },
+        {
+          link: "Apartment",
+          to: "/all-properties",
+        },
+        {
+          link: "Farmhouse",
+          to: "/all-properties",
+        },
+        {
+          link: "Duplex",
+          to: "/all-properties",
+        },
+        {
+          link: "Row house",
+          to: "/all-properties",
+        },
+      ],
+    },
     {
       title: "Real Estate",
       id: "lable1",
@@ -443,8 +474,12 @@ const Header = () => {
 
   const navigate = useNavigate();
 
-  const handleNavigate = (data) => {
-    navigate(`/headerblogs/${data}`, { state: { data: data } });
+  const handleNavigate = (data, index, to) => {
+    if (index === 0) {
+      window.location.href = `${mainWebsite}${to}`;
+    } else {
+      navigate(`/headerblogs/${data}`, { state: { data: data } });
+    }
   };
 
   // seacrh bar code
@@ -600,14 +635,14 @@ const Header = () => {
                           // fontWeight:"bold"
                         }}
                       >
-                        {subLinks.map((val, index) => {
+                        {subLinks.map((val, index1) => {
                           return (
                             // <NavDropdown.Item href={val.link}>
                             //   {val.link}
                             // </NavDropdown.Item>
                             <NavDropdown.Item
-                              onClick={() => handleNavigate(val.link)}
-                              key={index}
+                              onClick={() => handleNavigate(val.link, index, val.to)}
+                              key={index1}
                               className="custom-dropdown-item text-white "
                             >
                               {val.link}

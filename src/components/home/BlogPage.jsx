@@ -288,40 +288,46 @@ const BlogPage = () => {
               {[...Array(15).keys()].map((key) => (
                 <SwiperSlide>
                   <div className="blogHero">
-                    <img className="h-100 w-100" src={heroImages[key]} />
+                    <img
+                      className="h-100 w-100"
+                      style={{
+                        
+                      }}
+                      src={heroImages[key]}
+                    />
                   </div>
                 </SwiperSlide>
               ))}
-              <div className="position-absolute top-0 text-center z-2 d-flex justify-content-center align-items-center w-100 h-100 ">
-                <div className="mx-auto">
-                  <div
-                    id="title-1"
-                    style={{
-                      fontSize: "2.3rem",
-                      // background: "rgba(0, 0, 0, 0.7)",
-                      paddingLeft: "1rem",
-                      paddingRight: "1rem",
-                      borderTopLeftRadius: "1.5rem",
-                      borderTopRightRadius: "1.5rem",
-                    }}
-                    className="w-auto text-white "
-                  >
-                    Discover Your Home With
-                  </div>
-                  <div
-                    id="title-2"
-                    style={{
-                      fontSize: "3rem",
-                      // background: "rgba(0, 0, 0, 0.7)",
-                      borderBottomLeftRadius: "1.5rem",
-                      borderBottomRightRadius: "1.5rem",
-                    }}
-                    className="text-primary"
-                  >
-                    {/* Homz<span className="text-white">N</span>Offiz{" "} */}
-                    <span className="text-white">Real Estate Blogs</span>
-                  </div>
+              <div className="position-absolute top-0 text-center z-2 d-flex justify-content-center align-items-center w-100 h-100 bg-black bg-opacity-50">
+                {/* <div className="mx-auto"> */}
+                <div
+                  id="title-1"
+                  style={{
+                    fontSize: "2.3rem",
+                    // background: "rgba(0, 0, 0, 0.7)",
+                    paddingLeft: "1rem",
+                    paddingRight: "1rem",
+                    // borderTopLeftRadius: "1.5rem",
+                    // borderTopRightRadius: "1.5rem",
+                  }}
+                  className="w-auto text-white "
+                >
+                  Your Home Adventure Starts Here: Real Estate Blogs Edition
                 </div>
+                <div
+                  id="title-2"
+                  style={{
+                    fontSize: "3rem",
+                    // background: "rgba(0, 0, 0, 0.7)",
+                    borderBottomLeftRadius: "1.5rem",
+                    borderBottomRightRadius: "1.5rem",
+                  }}
+                  className="text-primary"
+                >
+                  {/* Homz<span className="text-white">N</span>Offiz{" "} */}
+                  {/* <span className="text-white"></span> */}
+                </div>
+                {/* </div> */}
               </div>
             </Swiper>
           </section>

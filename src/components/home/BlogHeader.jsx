@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import hnzLogo from "../../assets/blogs/blog header/af87f3d9-8317-474b-8bd6-bbee87854ffa 1.png";
+// import hnzLogo from "../../assets/blogs/blog header/af87f3d9-8317-474b-8bd6-bbee87854ffa 1.png";
+import hnzLogo from "../../assets/logo1.png";
 import user from "../../assets/blogs/blog header/🦆 icon _user circle alt_.svg";
 import facebook from "../../assets/blogs/blog header/facebook hover.png";
 import instagram from "../../assets/blogs/blog header/instagram hover.png";
@@ -205,8 +206,11 @@ const BlogHeader = () => {
         }}
       >
         <div className="container-fluid">
-          <a className="logo navbar-brand" href="#">
-            <img src={hnzLogo} alt="..." />
+          <a className="logo navbar-brand" style={{
+            width: "auto",
+            height: '70px'
+          }} href="/">
+            <img className="h-100 w-100 " src={hnzLogo} alt="..." />
           </a>
           {/* <span className="datesz fw-bold text-black" >
             {date}
