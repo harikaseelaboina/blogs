@@ -26,7 +26,7 @@ function Blogs() {
           <></>
         )}
 
-        <div className="row">
+        <div className="row mx-0 ">
           {/* <Cards
             css={"my-4 col-xxl-2 col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6"}
             data={displaydata}

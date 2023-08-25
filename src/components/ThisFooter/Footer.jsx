@@ -100,8 +100,8 @@ const Footer = () => {
   return (
     <div className="blog_footer pb-3 mt-3">
       <div
-        className="footer-columns row"
-        style={{ display: "flex", marginRight: "", marginLeft: "" }}
+        className="footer-columns row mx-0 "
+        style={{ display: "flex",  }}
       >
         {/* First Column */}
         <div className="column-container col-xxl-2 col-xl-3 col-lg-3 col-md-3 col-6 ">
