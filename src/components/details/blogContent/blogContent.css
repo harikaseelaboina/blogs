@@ -6,6 +6,10 @@
     /* background-color: #1A2333; */
 }
 
+.blogContent .title p{
+    /* font-family: "Raleway" !important; */
+}
+
 .blogContent .blogHero_img {
     overflow: hidden;
 }
