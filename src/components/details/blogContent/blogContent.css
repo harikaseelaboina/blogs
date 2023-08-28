@@ -88,7 +88,8 @@
     border-radius: 50%;
     width: 150px;
     height: 150px;
-    border: 15px solid #1A2333;
+    border: 5px solid #1A2333;
+    object-fit: contain;
 }
 
 .blogContent .profile .publishDate {
