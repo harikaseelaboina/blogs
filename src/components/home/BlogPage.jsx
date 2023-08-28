@@ -28,6 +28,22 @@ import hero5 from "../../assets/blogs/Rectangle13.jpg";
 import hero6 from "../../assets/blogs/Rectangle14.jpg";
 import hero7 from "../../assets/blogs/Rectangle15.jpg";
 
+import h1 from "../../assets/home_carousel/1.jpeg";
+import h2 from "../../assets/home_carousel/2.jpeg";
+import h3 from "../../assets/home_carousel/3.jpeg";
+import h4 from "../../assets/home_carousel/4.jpeg";
+import h5 from "../../assets/home_carousel/5.jpeg";
+import h6 from "../../assets/home_carousel/6.jpeg";
+import h7 from "../../assets/home_carousel/7.jpeg";
+import h8 from "../../assets/home_carousel/8.jpeg";
+import h9 from "../../assets/home_carousel/9.jpeg";
+import h10 from "../../assets/home_carousel/10.jpeg";
+import h11 from "../../assets/home_carousel/11.jpeg";
+import h12 from "../../assets/home_carousel/12.jpeg";
+import h13 from "../../assets/home_carousel/13.jpeg";
+import h14 from "../../assets/home_carousel/14.jpeg";
+import h15 from "../../assets/home_carousel/15.jpeg";
+
 // import Header from "../layout/Header";
 import Header from "../layout/Header/Header";
 import BlogHeader from "./BlogHeader";
@@ -49,7 +65,24 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import LuxuryProjects from "./news/Luxury";
 
-const heroImages = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
+// const heroImages = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
+const heroImages = [
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  h7,
+  h8,
+  h9,
+  h10,
+  h11,
+  h12,
+  h13,
+  h14,
+  h15,
+];
 const changeImage = (index) => {
   const heroImg = (document.getElementById(
     "blog-hero"
@@ -84,25 +117,25 @@ const BlogPage = () => {
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  useEffect(() => {
-    // Set the default image initially
-    setDefaultImage();
+  // useEffect(() => {
+  //   // Set the default image initially
+  //   setDefaultImage();
 
-    // Change the image every 4 seconds (4000ms)
-    const interval = setInterval(() => {
-      // Generate a random image index (except the current index)
-      let randomIndex;
-      do {
-        randomIndex = Math.floor(Math.random() * heroImages.length);
-      } while (randomIndex === currentImageIndex);
+  //   // Change the image every 4 seconds (4000ms)
+  //   const interval = setInterval(() => {
+  //     // Generate a random image index (except the current index)
+  //     let randomIndex;
+  //     do {
+  //       randomIndex = Math.floor(Math.random() * heroImages.length);
+  //     } while (randomIndex === currentImageIndex);
 
-      setCurrentImageIndex(randomIndex);
-      changeImage(randomIndex);
-    }, 2000);
+  //     setCurrentImageIndex(randomIndex);
+  //     changeImage(randomIndex);
+  //   }, 2000);
 
-    // Clean up the interval when the component unmounts
-    return () => clearInterval(interval);
-  }, []);
+  //   // Clean up the interval when the component unmounts
+  //   return () => clearInterval(interval);
+  // }, []);
 
   const [formData, setFormData] = useState({ email: "" });
 
@@ -151,15 +184,10 @@ const BlogPage = () => {
           <section className="blogHeader">
             <BlogHeader />
           </section>
-          <section
+          {/* <section
             // className="blogHero rounded-bottom-4"
             className="blogHero"
             id="blog-hero"
-            style={
-              {
-                // height: "22rem",
-              }
-            }
           >
             <span
               id="title-1"
@@ -172,7 +200,6 @@ const BlogPage = () => {
                 borderTopRightRadius: "1.5rem",
               }}
             >
-              {/* Your Ultimate guide to successful innovation projects with */}
               Discover Your Home With
             </span>
             <span
@@ -188,6 +215,121 @@ const BlogPage = () => {
               Homz<span className="text-white">N</span>Offiz{" "}
               <span className="text-white">Blogs</span>
             </span>
+          </section> */}
+          <section>
+            {/* <div
+              className=" z-2 text-center "
+              style={{
+                left: "50%",
+              }}
+            >
+              <span
+                id="title-1"
+                style={{
+                  fontSize: "2.3rem",
+                  // background: "rgba(0, 0, 0, 0.7)",
+                  paddingLeft: "1rem",
+                  paddingRight: "1rem",
+                  borderTopLeftRadius: "1.5rem",
+                  borderTopRightRadius: "1.5rem",
+                }}
+              >
+                Discover Your Home With
+              </span>
+              <span
+                id="title-2"
+                style={{
+                  fontSize: "3rem",
+                  // background: "rgba(0, 0, 0, 0.7)",
+                  borderBottomLeftRadius: "1.5rem",
+                  borderBottomRightRadius: "1.5rem",
+                }}
+                className="text-primary"
+              >
+                Homz<span className="text-white">N</span>Offiz{" "}
+                <span className="text-white">Blogs</span>
+              </span>
+            </div> */}
+            <Swiper
+              // slidesPerView={1}
+              spaceBetween={15}
+              loop={true}
+              // loopedSlides="auto"
+              navigation={false}
+              pagination={false}
+              keyboard={true}
+              modules={[Navigation, Pagination, Keyboard, Autoplay]}
+              className="mySwiper my-3 bg-transparent"
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              breakpoints={{
+                0: {
+                  slidesPerView: 1,
+                },
+                400: {
+                  slidesPerView: 1,
+                },
+                620: {
+                  slidesPerView: 1,
+                },
+                850: {
+                  slidesPerView: 1,
+                },
+                1000: {
+                  slidesPerView: 1,
+                },
+                1500: {
+                  slidesPerView: 1,
+                },
+              }}
+            >
+              {[...Array(15).keys()].map((key) => (
+                <SwiperSlide>
+                  <div className="blogHero">
+                    <img
+                      className="h-100 w-100"
+                      style={{
+                        
+                      }}
+                      src={heroImages[key]}
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+              <div className="position-absolute top-0 text-center z-2 d-flex justify-content-center align-items-center w-100 h-100 bg-black bg-opacity-50">
+                {/* <div className="mx-auto"> */}
+                <div
+                  id="title-1"
+                  style={{
+                    fontSize: "2.3rem",
+                    // background: "rgba(0, 0, 0, 0.7)",
+                    paddingLeft: "1rem",
+                    paddingRight: "1rem",
+                    // borderTopLeftRadius: "1.5rem",
+                    // borderTopRightRadius: "1.5rem",
+                  }}
+                  className="w-auto text-white "
+                >
+                  Your Home Adventure Starts Here: Real Estate Blogs Edition
+                </div>
+                <div
+                  id="title-2"
+                  style={{
+                    fontSize: "3rem",
+                    // background: "rgba(0, 0, 0, 0.7)",
+                    borderBottomLeftRadius: "1.5rem",
+                    borderBottomRightRadius: "1.5rem",
+                  }}
+                  className="text-primary"
+                >
+                  {/* Homz<span className="text-white">N</span>Offiz{" "} */}
+                  {/* <span className="text-white"></span> */}
+                </div>
+                {/* </div> */}
+              </div>
+            </Swiper>
           </section>
           <div className="py-2"></div>
           <section
@@ -244,7 +386,7 @@ const BlogPage = () => {
                         }
                         className="flex-shrink-0 me-3 rounded-end"
                         alt="..."
-                        // style={{ width: "40%" }}
+                        style={{ width: "40%" }}
                       />
                       <div
                         className="hedtxt d-flex flex-row align-items-center articleText"
@@ -254,11 +396,17 @@ const BlogPage = () => {
                     children={item?.attributes?.main_title}
                     remarkPlugins={[remarkGfm]}
                   /> */}
-                        {item.attributes.main_title}
+                        {item.attributes.main_title.length > 40
+                          ? item.attributes.main_title.slice(0, 40) + "..."
+                          : item.attributes.main_title}
                       </div>
                     </a>
                   ))}
               </div>
+            </section>
+
+            <section className="aadharcard">
+              <LuxuryProjects />
             </section>
 
             <section className="mainNews">
@@ -370,10 +518,6 @@ const BlogPage = () => {
             <section className="aadharCard">
               {/* <AadharCard GovtIdentityData={GovtIdentityData} /> */}
               <AadharCard />
-            </section>
-
-            <section className="aadharcard">
-              <LuxuryProjects />
             </section>
 
             <section className="onestop" style={{ borderRadius: "12px" }}>

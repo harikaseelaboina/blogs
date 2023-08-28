@@ -38,7 +38,8 @@
   color: white;
   margin: 0 auto;
   min-height: 100%;
-  height: 24rem;
+  /* height: 31rem; */
+  height: 500px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -157,7 +158,7 @@
   z-index: 2;
   display: flex;
   flex-direction: row;
-  animation: move linear 15s infinite;
+  animation: move linear 20s infinite;
 }
 
 .headlines #headline-articles .articleDiv {
@@ -172,7 +173,7 @@
   font-size: 1vw;
 }
 
-.headlines #headline-articles .articleDiv:hover .articleText {
+.headlines #headline-articles:hover .articleText {
   color: #007aff;
 }
 
@@ -212,7 +213,7 @@
     z-index: 2;
     display: flex;
     flex-direction: row;
-    animation: move linear 15s infinite;
+    animation: move linear 20s infinite;
   }
 
   .headlines #headline-articles .articleDiv {

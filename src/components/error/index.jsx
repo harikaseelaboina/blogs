@@ -7,7 +7,7 @@ function ErrorFallback({ error, resetErrorBoundary }) {
   return (
     <EmptyLayout title={"HomzNOffiz - Something Went Wrong"}>
     <div
-      className="d-flex flex-column justify-content-center align-items-center text-white text-center"
+      className="d-flex flex-column justify-content-center align-items-center text-black text-center"
       style={{
         height: "100vh",
       }}

@@ -93,7 +93,7 @@
 
 .od_cards_container .od_card .od_card__btn {
   /* background-color: #cde4ff; */
-  background-color:#C88F63;
+  background-color: #C88F63;
   max-width: fit-content;
   color: black;
   font-weight: 400;
@@ -139,6 +139,10 @@
   position: absolute;
   top: 45.2%;
   transform: translate(-50%, -50%);
+  background: #C88F63;
+  padding: 5px 8px;
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .od_cards_container .prevBtn {
@@ -200,9 +204,11 @@
     top: 41%;
     /* right: 0rem; */
   }
-  .od_cards_container .prevBtn{
+
+  .od_cards_container .prevBtn {
     left: -1.0rem;
   }
+
   .od_cards_container .nextBtn {
     right: -2.0rem;
   }

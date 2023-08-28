@@ -7,7 +7,7 @@ function Page404() {
   return (
     <EmptyLayout title={"HomzNOffiz - Page Not Found"}>
       <div
-        className="d-flex justify-content-center align-items-center text-white text-center"
+        className="d-flex justify-content-center align-items-center text-black text-center"
         style={{
           height: "100vh",
         }}

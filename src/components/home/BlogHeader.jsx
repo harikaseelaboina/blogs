@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import hnzLogo from "../../assets/blogs/blog header/af87f3d9-8317-474b-8bd6-bbee87854ffa 1.png";
+// import hnzLogo from "../../assets/blogs/blog header/af87f3d9-8317-474b-8bd6-bbee87854ffa 1.png";
+import hnzLogo from "../../assets/logo1.png";
 import user from "../../assets/blogs/blog header/🦆 icon _user circle alt_.svg";
 import facebook from "../../assets/blogs/blog header/facebook hover.png";
 import instagram from "../../assets/blogs/blog header/instagram hover.png";
@@ -77,32 +78,60 @@ let navLinks = [
   // },
 ];
 
+// const social = [
+//   {
+//     name: "Instagram",
+//     icon: instagram,
+//     link: "https://www.instagram.com/homznoffiz/",
+//   },
+//   {
+//     name: "LinekdIn",
+//     icon: linkedIn,
+//     link: "https://www.linkedin.com/company/homznoffiz/",
+//   },
+//   {
+//     name: "Facebook",
+//     icon: facebook,
+//     link: "https://www.facebook.com/homznoffiz/",
+//   },
+//   {
+//     name: "Twitter",
+//     icon:twitter,
+//     link: "#",
+//   },
+//   // {
+//   //   name: "Threads",
+//   //   icon: "https://seeklogo.com/images/T/threads-by-instagram-logo-20008C5295-seeklogo.com.png?v=638243447960000000",
+//   //   link: "#",
+//   // },
+// ];
+
 const social = [
   {
     name: "Instagram",
-    icon: instagram,
+    icon: "https://img.icons8.com/?size=512&id=Xy10Jcu1L2Su&format=png",
     link: "https://www.instagram.com/homznoffiz/",
   },
   {
     name: "LinekdIn",
-    icon: linkedIn,
+    icon: "https://img.icons8.com/?size=512&id=xuvGCOXi8Wyg&format=png",
     link: "https://www.linkedin.com/company/homznoffiz/",
   },
   {
     name: "Facebook",
-    icon: facebook,
+    icon: "https://img.icons8.com/?size=512&id=uLWV5A9vXIPu&format=png",
     link: "https://www.facebook.com/homznoffiz/",
   },
   {
     name: "Twitter",
-    icon:twitter,
+    icon: "https://img.icons8.com/?size=512&id=5MQ0gPAYYx7a&format=png",
     link: "#",
   },
-  // {
-  //   name: "Threads",
-  //   icon: "https://seeklogo.com/images/T/threads-by-instagram-logo-20008C5295-seeklogo.com.png?v=638243447960000000",
-  //   link: "#",
-  // },
+  {
+    name: "Threads",
+    icon: "https://seeklogo.com/images/T/threads-by-instagram-logo-20008C5295-seeklogo.com.png?v=638243447960000000",
+    link: "#",
+  },
 ];
 
 const BlogHeader = () => {
@@ -177,8 +206,11 @@ const BlogHeader = () => {
         }}
       >
         <div className="container-fluid">
-          <a className="logo navbar-brand" href="#">
-            <img src={hnzLogo} alt="..." />
+          <a className="logo navbar-brand" style={{
+            width: "auto",
+            height: '70px'
+          }} href="/">
+            <img className="h-100 w-100 " src={hnzLogo} alt="..." />
           </a>
           {/* <span className="datesz fw-bold text-black" >
             {date}
@@ -298,9 +330,21 @@ const BlogHeader = () => {
                     alt="..."
                     style={{ width: "11px", height: "11px" }}
                   />
-                  <img src={instagram} alt="..."  style={{ width: "11px", height: "11px" }} />
-                  <img src={linkedIn} alt="..."  style={{ width: "11px", height: "11px" }}/>
-                  <img src={twitter} alt="..."  style={{ width: "11px", height: "11px" }}/>
+                  <img
+                    src={instagram}
+                    alt="..."
+                    style={{ width: "11px", height: "11px" }}
+                  />
+                  <img
+                    src={linkedIn}
+                    alt="..."
+                    style={{ width: "11px", height: "11px" }}
+                  />
+                  <img
+                    src={twitter}
+                    alt="..."
+                    style={{ width: "11px", height: "11px" }}
+                  />
                 </div>
               </div>
               {show && (

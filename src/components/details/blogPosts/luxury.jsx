@@ -13,8 +13,8 @@ const LuxuryProjects = (props) => {
     // width: "100%",
     // margin: "0 auto",
     // minHeight: "100%",
-    
-    marginBottom:"3.5rem",
+
+    marginBottom: "3.5rem",
     // border:"2px black solid"
   };
   return (
@@ -24,13 +24,10 @@ const LuxuryProjects = (props) => {
         style={mainStyle}
       >
         <div className=" col-lg-12 col-md-12 ">
-         
-          
-        <div style={{height:"27rem"}} >
-          <Luxurycarousel data={MainnewsData} />
+          <div style={{ height: "27rem" }}>
+            <Luxurycarousel data={MainnewsData} />
           </div>
         </div>
-        
       </div>
     </>
   );
