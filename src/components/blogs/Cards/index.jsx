@@ -33,7 +33,7 @@ function Cards(props) {
     <div>
       <div className="grid-container">
         {currentPageData.map((item, index) => (
-          <a href={`/details/${item.id}`} key={index} className="grid-item">
+          <a href={`/details/${item.id}/${item?.attributes?.slug_name}`} key={index} className="grid-item">
             <div
               key={index}
               className="rounded-3 pb-1 text-white"

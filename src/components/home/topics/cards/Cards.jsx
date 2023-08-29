@@ -82,7 +82,7 @@ const Cards = (props) => {
                   )}
                 </div>
                 <a
-                  href={`/details/${item.id}`}
+                  href={`/details/${item.id}/${item?.attributes?.slug_name}`}
                   className="row position-relative upper-card"
                   style={{
                     height: "20rem",
@@ -159,7 +159,7 @@ const Cards = (props) => {
           {data?.slice(5).map((item, index) => (
             <SwiperSlide key={index}>
               <a
-                href={`/details/${item.id}`}
+                href={`/details/${item.id}/${item?.attributes?.slug_name}`}
                 className="card rounded-4"
                 style={{
                   height: "12rem",

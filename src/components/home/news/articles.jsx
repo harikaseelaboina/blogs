@@ -50,7 +50,7 @@ const Articles = (props) => {
                 data.slice(0, 3).map((item, index) => (
                   <SwiperSlide key={index}>
                     <a
-                      href={`/details/${item.id}`}
+                      href={`/details/${item.id}/${item?.attributes?.slug_name}`}
                       className="col-12 card d-flex flex-column justify-content-end"
                       style={{
                         ...cardStyle,
@@ -136,7 +136,7 @@ const Articles = (props) => {
                   return (
                     <SwiperSlide key={index}>
                       <a
-                        href={`/details/${item.id}`}
+                        href={`/details/${item.id}/${item?.attributes?.slug_name}`}
                         className="card d-flex flex-column justify-content-end  me-2"
                         style={{
                           ...cardStyle,
@@ -237,7 +237,7 @@ const Articles = (props) => {
             >
               {data?.slice(8).map((item, index) => (
                 <a
-                  href={`/details/${item.id}`}
+                  href={`/details/${item.id}/${item?.attributes?.slug_name}`}
                   className="row g-0 position-relative card my-1"
                   key={index}
                 >

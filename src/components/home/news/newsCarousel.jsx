@@ -124,7 +124,7 @@ const NewsCarousel = (props) => {
                   )}
                 </div>
                 <a
-                  href={`/details/${item.id}`}
+                  href={`/details/${item.id}/${item?.attributes?.slug_name}`}
                   className="card w-100 d-flex flex-column justify-content-end"
                   style={{
                     ...cardStyle,

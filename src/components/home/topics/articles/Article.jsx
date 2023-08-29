@@ -21,7 +21,7 @@ const Article = (props) => {
         //  <div className="listContainer" > */}
         {data?.map((item, index) => (
           <a
-            href={`/details/${item.id}`}
+            href={`/details/${item.id}/${item?.attributes?.slug_name}`}
             className="row g-0 position-relative card my-1"
             key={index}
           >

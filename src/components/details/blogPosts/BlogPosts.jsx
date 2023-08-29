@@ -21,7 +21,7 @@ const BlogPosts = ({ title, category }) => {
     //   <div style={{ maxHeight: "38rem", minHeight: "20rem", overflow: "auto" }}>
     //     {data.map((item, index) => (
     //       <a
-    //         href={`/details/${item.id}`}
+    //         href={`/details/${item.id}/${item?.attributes?.slug_name}`}
     //         className="post d-flex align-items-center  gap-2"
     //         key={index}
     //       >
@@ -67,7 +67,7 @@ const BlogPosts = ({ title, category }) => {
       <div style={{ maxHeight: "35rem", minHeight: "20rem", overflow: "auto" }}>
         {data.map((item, index) => (
           <a
-            href={`/details/${item.id}`}
+            href={`/details/${item.id}/${item?.attributes?.slug_name}`}
             className="post gap-2"
             style={{
               backgroundColor: "white",

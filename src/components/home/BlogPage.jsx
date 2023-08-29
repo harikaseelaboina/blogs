@@ -374,7 +374,7 @@ const BlogPage = () => {
                 {headlinesData &&
                   headlinesData.map((item, key) => (
                     <a
-                      href={`/details/${item.id}`}
+                      href={`/details/${item.id}/${item?.attributes?.slug_name}`}
                       className="d-flex position-relative articleDiv rounded-end-4"
                       key={key}
                       style={{ color: "white" }}

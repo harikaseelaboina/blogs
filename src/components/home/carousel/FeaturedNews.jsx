@@ -79,7 +79,7 @@ const FeaturedNews = (props) => {
             return (
               <SwiperSlide key={index}>
                 <a
-                  href={`/details/${item.id}`}
+                  href={`/details/${item.id}/${item?.attributes?.slug_name}`}
                   className="card"
                   style={cardStyle}
                 >

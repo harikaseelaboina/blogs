@@ -34,7 +34,7 @@ const Articles = (props) => {
                   style={{ paddingLeft: "1rem", paddingRight: "1rem" }}
                 >
                   <a
-                    href={`/details/${item.id}`}
+                    href={`/details/${item.id}/${item?.attributes?.slug_name}`}
                     className="col-12 card d-flex flex-column "
                     style={{
                       ...cardStyle,
@@ -99,7 +99,7 @@ const Articles = (props) => {
                     style={{ paddingLeft: "1rem", paddingRight: "1rem" }}
                   >
                     <a
-                      href={`/details/${item.id}`}
+                      href={`/details/${item.id}/${item?.attributes?.slug_name}`}
                       className="col-12 card d-flex flex-column "
                       style={{
                         ...cardStyle,
@@ -150,7 +150,7 @@ const Articles = (props) => {
                     style={{ paddingLeft: "1rem", paddingRight: "1rem" }}
                   >
                     <a
-                      href={`/details/${item.id}`}
+                      href={`/details/${item.id}/${item?.attributes?.slug_name}`}
                       className="col-12 card d-flex flex-column "
                       style={{
                         ...cardStyle,

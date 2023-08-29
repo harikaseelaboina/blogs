@@ -22,7 +22,7 @@ function App() {
         <Route path="/blogs/:title" element={<Blogs />} />
 
         {/* Blog details page */}
-        <Route path="/details/:id" element={<Details />} />
+        <Route path="/details/:id/:slug" element={<Details />} />
 
         {/* List of headerblogs page */}
         <Route path="/headerblogs/:data" element={<HeaderBlogs />} />

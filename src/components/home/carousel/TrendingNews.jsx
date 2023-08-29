@@ -67,7 +67,7 @@ const TrendingNews = (props) => {
         {TrendingNewsData.map((item, index) => (
           <SwiperSlide key={index}>
             <a
-              href={`/details/${item.id}`}
+              href={`/details/${item.id}/${item?.attributes?.slug_name}`}
               className="card text-white"
               style={cardStyle}
             >

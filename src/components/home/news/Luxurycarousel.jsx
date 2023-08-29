@@ -201,7 +201,7 @@ const Luxurycarousel = (props) => {
                         flexDirection: "column",
                         color: "black",
                       }}
-                      href={`${mainWebsite}/property/${value.id}/${slug_name}`}
+                      href={`${mainWebsite}/property/${slug_name}`}
                     >
                       <span
                         style={{

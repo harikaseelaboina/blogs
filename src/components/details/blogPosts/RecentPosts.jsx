@@ -36,7 +36,7 @@ const RecentPosts = ({ title }) => {
       >
         {data.map((item, index) => (
           <a
-            href={`/details/${item.id}`}
+            href={`/details/${item.id}/${item?.attributes?.slug_name}`}
             className="post gap-2"
             style={{
               backgroundColor: "white",
