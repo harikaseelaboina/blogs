@@ -57,7 +57,7 @@ const Luxurycarousel = (props) => {
     return () => {};
   }, [projects]);
 
-  console.log("data", data);
+  // console.log("projects", projects);
 
   return (
     <div
@@ -112,6 +112,7 @@ const Luxurycarousel = (props) => {
           {projects.map((value, index) => {
             const location =
               value.attributes.community.data.attributes.community_name;
+            const slug_name = value.attributes.asset_slug_name;
             const city =
               value.attributes.community.data.attributes.city.data.attributes
                 .city_name;
@@ -200,7 +201,7 @@ const Luxurycarousel = (props) => {
                         flexDirection: "column",
                         color: "black",
                       }}
-                      href={`${mainWebsite}/property`}
+                      href={`${mainWebsite}/property/${value.id}/${slug_name}`}
                     >
                       <span
                         style={{
