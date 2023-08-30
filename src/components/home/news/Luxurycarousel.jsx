@@ -208,28 +208,51 @@ const Luxurycarousel = (props) => {
                           padding: "0.5rem",
                           paddingBottom: "0",
                           fontWeight: "bold",
+                          color: "white",
                         }}
                       >
                         {propertyName.length > 25
                           ? propertyName.slice(0, 25) + "..."
                           : propertyName}
                       </span>
-                      <span style={{ padding: "0.5rem", paddingTop: "0" }}>
-                        {location}, {city}
-                      </span>
-
                       <span
                         style={{
                           padding: "0.5rem",
-                          paddingTop: "1rem",
-                          fontWeight: "bold",
+                          paddingTop: "0",
+                          fontSize: "12px",
+                          color: "#0E1420",                          
                         }}
                       >
-                        <BsCurrencyRupee />{" "}
-                        <span>
-                          {Price} {unit1} to {Maximum} {unit2}
-                        </span>
+                        {location}, {city}
                       </span>
+
+                      {Price && Maximum ? (
+                        <span
+                          style={{
+                            padding: "0.5rem",
+                            paddingTop: "1rem",
+                            fontWeight: "bold",
+                            color: "white",
+                          }}
+                        >
+                          <BsCurrencyRupee />{" "}
+                          <span>
+                            {Price} {unit1} to {Maximum} {unit2}
+                          </span>
+                        </span>
+                      ) : (
+                        <span
+                          style={{
+                            padding: "0.5rem",
+                            paddingTop: "1rem",
+                            fontWeight: "bold",
+                            // color: "#0E1420",
+                          }}
+                        >
+                          Click here for the Best Deals
+                        </span>
+                      )}
+
                       <span
                         style={{
                           display: "flex",
@@ -258,7 +281,7 @@ const Luxurycarousel = (props) => {
                         onClick={handleShowModal}
                         style={{
                           borderRadius: "30px",
-                          border: "2px solid white",
+                          border: "2px solid gray",
                           width: "60%",
                           background: "transparent",
                         }}
