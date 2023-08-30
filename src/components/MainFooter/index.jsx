@@ -489,7 +489,8 @@ const index = () => {
               </div>
               <div className="col-lg-12 col-md-12 col-sm-12 hnz-copyright-text-1">
                 <div>
-                  Copyright © 2023 Design. Crafted with
+                  Copyright © 2023 HomznOffiz PVT LTD.
+                  {/* Crafted with
                   <img
                     src={footerimg1}
                     alt="footer-img-1"
@@ -501,7 +502,7 @@ const index = () => {
                     alt="footer-img-2"
                     id="footer-img-2"
                     className=""
-                  />
+                  /> */}
                 </div>
               </div>
             </div>

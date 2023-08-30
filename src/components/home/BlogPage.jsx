@@ -289,7 +289,7 @@ const BlogPage = () => {
                 <SwiperSlide>
                   <div className="blogHero">
                     <img
-                      className="h-100 w-100"
+                      className="h-100 w-100 object-fit-cover "
                       style={{
                         
                       }}
