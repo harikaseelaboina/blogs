@@ -20,6 +20,7 @@ import PlayButton from "../../playButton";
 
 import { BiSolidShareAlt } from "react-icons/bi";
 import { BsCurrencyRupee } from "react-icons/bs";
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 
 import { useNavigate } from "react-router-dom";
 
@@ -94,6 +95,38 @@ const Luxurycarousel = (props) => {
 
     return () => {};
   }, [projects]);
+
+  const [wishList, setWishList] = useState([]);
+
+  const handleWishlist = (value) => {
+    var wishlist = JSON.parse(localStorage.getItem("HNO_Wishlist"));
+
+    if (!wishlist) wishlist = [];
+
+    const filteredData = wishlist.filter((d) => d.id === value.id);
+
+    if (filteredData && filteredData.length > 0) {
+      const filteredData = wishlist.filter((d) => d.id !== value.id);
+      localStorage.setItem("HNO_Wishlist", JSON.stringify(filteredData));
+      setWishList(filteredData);
+      toast.success("Removed from wishlist");
+    } else {
+      wishlist.push(value);
+      localStorage.setItem("HNO_Wishlist", JSON.stringify(wishlist));
+      setWishList(wishlist);
+      toast.success("Added to wishlist");
+    }
+
+    // handleWishlist();
+  };
+
+  useEffect(() => {
+    setWishList(JSON.parse(localStorage.getItem("HNO_Wishlist")));
+
+    // return () => {};
+  }, []);
+
+  // console.log(wishList);
 
   return (
     <div
@@ -215,7 +248,7 @@ const Luxurycarousel = (props) => {
                         style={{
                           position: "absolute",
                           top: 5,
-                          backgroundColor: "rgb(255, 255, 255,0.2)",
+                          backgroundColor: "rgb(255, 255, 255,0.8)",
                           padding: "0.2rem",
                           display: "flex",
                           flexDirection: "column",
@@ -224,11 +257,30 @@ const Luxurycarousel = (props) => {
                           right: 5,
                           cursor: "pointer",
                         }}
-                        onClick={() => {
-                          copyUrlToClipboard();
-                        }}
                       >
-                        <BiSolidShareAlt color="white" size={20} />
+                        <div
+                          onClick={() => {
+                            handleWishlist(value);
+                          }}
+                        >
+                          {wishList &&
+                          wishList.length > 0 &&
+                          wishList.filter((d) => d.id === value.id).length >
+                            0 ? (
+                            <AiFillHeart color="red" size={23} />
+                          ) : (
+                            <AiOutlineHeart color="black" size={23} />
+                          )}
+                        </div>
+                        <br />
+                        <br />
+                        <div
+                          onClick={() => {
+                            copyUrlToClipboard();
+                          }}
+                        >
+                          <BiSolidShareAlt color="black" size={23} />
+                        </div>
                       </div>
                       <div
                         style={{
@@ -283,18 +335,35 @@ const Luxurycarousel = (props) => {
                         {location}, {city}
                       </span>
 
-                      <span
-                        style={{
-                          padding: "0.5rem",
-                          paddingTop: "1rem",
-                          fontWeight: "bold",
-                        }}
-                      >
-                        <BsCurrencyRupee />{" "}
-                        <span>
-                          {Price} {unit1} to {Maximum} {unit2}
+                      {Price && Maximum ? (
+                        <span
+                          style={{
+                            padding: "0.5rem",
+                            paddingTop: "1rem",
+                            fontWeight: "bold",
+                            color: "white",
+                          }}
+                        >
+                          <BsCurrencyRupee />
+                          <span>
+                            {Price} {unit1} to {Maximum} {unit2}
+                          </span>
                         </span>
-                      </span>
+                      ) : (
+                        <a
+                          style={{
+                            padding: "0.5rem",
+                            paddingTop: "1rem",
+                            fontWeight: "bold",
+                            color: "green",
+                            zIndex: 10,
+                          }}
+                          href={`${mainWebsite}/all-properties`}
+                        >
+                          Click for Best Deals
+                        </a>
+                      )}
+
                       <span
                         style={{
                           display: "flex",

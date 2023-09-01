@@ -16,6 +16,9 @@ import Form from "../Form/Form";
 
 import { BsCurrencyRupee } from "react-icons/bs";
 import { BiSolidShareAlt } from "react-icons/bi";
+
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+
 import { toast } from "react-toastify";
 import { mainWebsite } from "../../../config";
 import axios from "axios";
@@ -58,6 +61,38 @@ const Luxurycarousel = (props) => {
   }, [projects]);
 
   // console.log("projects", projects);
+
+  const [wishList, setWishList] = useState([]);
+
+  const handleWishlist = (value) => {
+    var wishlist = JSON.parse(localStorage.getItem("HNO_Wishlist"));
+
+    if (!wishlist) wishlist = [];
+
+    const filteredData = wishlist.filter((d) => d.id === value.id);
+
+    if (filteredData && filteredData.length > 0) {
+      const filteredData = wishlist.filter((d) => d.id !== value.id);
+      localStorage.setItem("HNO_Wishlist", JSON.stringify(filteredData));
+      setWishList(filteredData);
+      toast.success("Removed from wishlist");
+    } else {
+      wishlist.push(value);
+      localStorage.setItem("HNO_Wishlist", JSON.stringify(wishlist));
+      setWishList(wishlist);
+      toast.success("Added to wishlist");
+    }
+
+    // handleWishlist();
+  };
+
+  useEffect(() => {
+    setWishList(JSON.parse(localStorage.getItem("HNO_Wishlist")));
+
+    // return () => {};
+  }, []);
+
+  // console.log(wishList);
 
   return (
     <div
@@ -171,7 +206,7 @@ const Luxurycarousel = (props) => {
                       style={{
                         position: "absolute",
                         top: 5,
-                        backgroundColor: "rgb(255, 255, 255,0.2)",
+                        backgroundColor: "rgb(255, 255, 255,0.8)",
                         padding: "0.2rem",
                         display: "flex",
                         flexDirection: "column",
@@ -179,12 +214,31 @@ const Luxurycarousel = (props) => {
                         alignItems: "end",
                         right: 5,
                         cursor: "pointer",
-                      }}
-                      onClick={() => {
-                        copyUrlToClipboard();
+                        zIndex: 10,
                       }}
                     >
-                      <BiSolidShareAlt color="white" size={20} />
+                      <div
+                        onClick={() => {
+                          handleWishlist(value);
+                        }}
+                      >
+                        {wishList &&
+                        wishList.length > 0 &&
+                        wishList.filter((d) => d.id === value.id).length > 0 ? (
+                          <AiFillHeart color="red" size={23} />
+                        ) : (
+                          <AiOutlineHeart color="black" size={23} />
+                        )}
+                      </div>
+                      <br />
+                      <br />
+                      <div
+                        onClick={() => {
+                          copyUrlToClipboard();
+                        }}
+                      >
+                        <BiSolidShareAlt color="black" size={23} />
+                      </div>
                     </div>
                   </div>
                   <div
@@ -220,7 +274,7 @@ const Luxurycarousel = (props) => {
                           padding: "0.5rem",
                           paddingTop: "0",
                           fontSize: "12px",
-                          color: "#0E1420",                          
+                          color: "#0E1420",
                         }}
                       >
                         {location}, {city}
@@ -235,22 +289,24 @@ const Luxurycarousel = (props) => {
                             color: "white",
                           }}
                         >
-                          <BsCurrencyRupee />{" "}
+                          <BsCurrencyRupee />
                           <span>
                             {Price} {unit1} to {Maximum} {unit2}
                           </span>
                         </span>
                       ) : (
-                        <span
+                        <a
                           style={{
                             padding: "0.5rem",
                             paddingTop: "1rem",
                             fontWeight: "bold",
-                            // color: "#0E1420",
+                            color: "green",
+                            zIndex: 10,
                           }}
+                          href={`${mainWebsite}/all-properties`}
                         >
-                          Click here for the Best Deals
-                        </span>
+                          Click for Best Deals
+                        </a>
                       )}
 
                       <span

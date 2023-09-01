@@ -65,6 +65,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import LuxuryProjects from "./news/Luxury";
 
+import { FcNews } from "react-icons/fc";
+
 // const heroImages = [hero1, hero2, hero3, hero4, hero5, hero6, hero7];
 const heroImages = [
   h1,
@@ -290,9 +292,7 @@ const BlogPage = () => {
                   <div className="blogHero">
                     <img
                       className="h-100 w-100 object-fit-cover "
-                      style={{
-                        
-                      }}
+                      style={{}}
                       src={heroImages[key]}
                     />
                   </div>
@@ -360,10 +360,9 @@ const BlogPage = () => {
                     width: "4rem",
                     marginRight: "0",
                     padding: "0",
-                    // border:"2px solid red"
                   }}
                 />
-                {/* <div> */}
+                {/* <div> */}                
                 <span className="mt-0 fw-bold" style={{ fontSize: "1.2rem" }}>
                   Headlines
                 </span>

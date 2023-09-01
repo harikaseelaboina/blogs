@@ -6,6 +6,7 @@ import MainNewsCarousel from "./mainnewscarousel";
 import { BlogsContext } from "../../context/CustomContextApi";
 import Luxurycarousel from "./Luxurycarousel";
 import "./styles.css";
+import { mainWebsite } from "../../../config";
 
 const LuxuryProjects = (props) => {
   const { MainnewsData, EditorsData } = useContext(BlogsContext);
@@ -13,7 +14,7 @@ const LuxuryProjects = (props) => {
     // width: "100%",
     // margin: "0 auto",
     // minHeight: "100%",
-    marginBottom:"1rem"
+    marginBottom: "1rem",
   };
   return (
     <>
@@ -22,20 +23,22 @@ const LuxuryProjects = (props) => {
         style={mainStyle}
       >
         <div className=" col-lg-12 col-md-12 ">
-         
           <div className="heading rounded-start-4 d-flex flex-row justify-content-between">
-        <span
-          className="title text-black fs-5 fw-bolder"
-          style={{  }}
-        >
-          Luxury Projects
-        </span>
-        </div>
-        <div style={{height:"27rem"}} >
-          <Luxurycarousel data={MainnewsData} />
+            <span className="title text-black fs-5 fw-bolder" style={{}}>
+              Luxury Projects
+            </span>
+            <a
+              href={`${mainWebsite}/all-properties`}
+              className="text-black fw-bolder"
+              style={{}}
+            >
+              View all
+            </a>
+          </div>
+          <div style={{ height: "27rem" }}>
+            <Luxurycarousel data={MainnewsData} />
           </div>
         </div>
-        
       </div>
     </>
   );
