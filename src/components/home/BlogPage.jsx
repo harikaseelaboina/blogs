@@ -351,7 +351,8 @@ const BlogPage = () => {
                 // style={{ width: "10rem" }}
               >
                 <img
-                  src="https://res.cloudinary.com/dyylqn8vb/image/upload/v1689660410/loading-animation_qydvj9.gif"
+                  src="https://cdn3.iconfinder.com/data/icons/ballicons-reloaded-free/512/icon-70-512.png"
+                  // src="https://res.cloudinary.com/dyylqn8vb/image/upload/v1689660410/loading-animation_qydvj9.gif"
                   className="flex-shrink-0 "
                   alt="..."
                   style={{
@@ -362,7 +363,7 @@ const BlogPage = () => {
                     padding: "0",
                   }}
                 />
-                {/* <div> */}                
+                {/* <div> */}
                 <span className="mt-0 fw-bold" style={{ fontSize: "1.2rem" }}>
                   Headlines
                 </span>
