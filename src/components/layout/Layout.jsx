@@ -15,7 +15,7 @@ function Layout({ title, description, keywords, children, noheader }) {
         <meta name="keywords" content={keywords} />
       </Helmet>
       <div
-        // className="main-container mx-lg-5 mx-md-2"
+        // className="main-container  mx-md-2"
         className="main-container"
         style={{
           // margin: "0 2%",

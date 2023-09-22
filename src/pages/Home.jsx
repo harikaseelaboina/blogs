@@ -3,6 +3,7 @@ import Layout from "../components/layout/Layout";
 import MyHome from "../components/home/BlogPage";
 import { BlogsContext } from "../components/context/CustomContextApi";
 
+
 function Home() {
   const { homedata } = useContext(BlogsContext);
 
